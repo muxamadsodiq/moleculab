@@ -51,7 +51,16 @@ function anatomyAvailable(species) {
   return species === "human" && !!A3D.bundle;
 }
 
-// Compute a flat normal per face so the surface shades instead of reading as a silhouette.
+// The bundle stores a body about 2 units tall with Z as the head-to-foot axis. 3Dmol is built
+// for molecules (tens of angstroms) and treats Y as up, so every vertex is scaled and the axes
+// swapped. Without this the whole body renders as a single dot in the middle of the viewport.
+const A3D_SCALE = 55;
+
+function a3dTransform(p) {
+  return { x: p[0] * A3D_SCALE, y: p[2] * A3D_SCALE, z: -p[1] * A3D_SCALE };
+}
+
+// Flat normal per face, so the surface shades instead of reading as a flat silhouette.
 function buildGeometry(part) {
   const verts = part.vertices;
   const faces = part.faces;
@@ -61,23 +70,44 @@ function buildGeometry(part) {
   let n = 0;
   for (let i = 0; i < faces.length; i++) {
     const [ia, ib, ic] = faces[i];
-    const a = verts[ia], b = verts[ib], c = verts[ic];
-    if (!a || !b || !c) continue;
-    const ux = b[0] - a[0], uy = b[1] - a[1], uz = b[2] - a[2];
-    const vx = c[0] - a[0], vy = c[1] - a[1], vz = c[2] - a[2];
+    if (!verts[ia] || !verts[ib] || !verts[ic]) continue;
+    const a = a3dTransform(verts[ia]);
+    const b = a3dTransform(verts[ib]);
+    const c = a3dTransform(verts[ic]);
+    const ux = b.x - a.x, uy = b.y - a.y, uz = b.z - a.z;
+    const vx = c.x - a.x, vy = c.y - a.y, vz = c.z - a.z;
     let nx = uy * vz - uz * vy;
     let ny = uz * vx - ux * vz;
     let nz = ux * vy - uy * vx;
     const len = Math.sqrt(nx * nx + ny * ny + nz * nz) || 1;
     nx /= len; ny /= len; nz /= len;
-    [a, b, c].forEach(function (p) {
-      vertexArr.push({ x: p[0], y: p[1], z: p[2] });
+    [a, b, c].forEach(function (q) {
+      vertexArr.push(q);
       normalArr.push({ x: nx, y: ny, z: nz });
     });
     faceArr.push(n, n + 1, n + 2);
     n += 3;
   }
   return { vertexArr: vertexArr, normalArr: normalArr, faceArr: faceArr };
+}
+
+// 3Dmol's zoomTo() does not frame custom geometry in this build - it returns a positive camera
+// distance that renders nothing, and small negative values put the camera INSIDE the body, which
+// shows organs as thin slivers. So the camera is placed from the bundle's own bounding box.
+function a3dFrameCamera(viewer, bundle) {
+  let lo = [1e9, 1e9, 1e9], hi = [-1e9, -1e9, -1e9];
+  Object.values(bundle.parts || {}).forEach(function (part) {
+    part.vertices.forEach(function (p) {
+      const q = a3dTransform(p);
+      lo = [Math.min(lo[0], q.x), Math.min(lo[1], q.y), Math.min(lo[2], q.z)];
+      hi = [Math.max(hi[0], q.x), Math.max(hi[1], q.y), Math.max(hi[2], q.z)];
+    });
+  });
+  const height = Math.max(hi[1] - lo[1], hi[0] - lo[0], 1);
+  // 3Dmol's default field of view needs roughly height / (2*tan(10deg)) to fit the subject.
+  const distance = -(height / (2 * Math.tan(10 * Math.PI / 180))) * 1.05;
+  viewer.setView([0, 0, 0, distance, 0, 0, 0, 1]);
+  return distance;
 }
 
 function a3dColour(frac) {
@@ -127,7 +157,7 @@ function renderAnatomy3D(hostId, frame, maxC, onPick) {
       });
       A3D.shapes[id] = { shape: shape, isSkin: isSkin };
     });
-    A3D.viewer.zoomTo();
+    a3dFrameCamera(A3D.viewer, A3D.bundle);
   }
 
   // Recolour by concentration.

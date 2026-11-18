@@ -813,11 +813,14 @@ tr.diff > td { background: rgba(111, 159, 224, 0.07); }
 
 
 /* ---- whole-body distribution ---------------------------------------- */
-.an-stage { display: grid; grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+/* The figure is the point of this page, so it gets the larger share. At 320px a whole body
+   rendered as a thumbnail and the organs were unreadable. */
+.an-stage { display: grid; grid-template-columns: minmax(360px, 1.15fr) minmax(0, 1fr);
   gap: var(--s-4); flex: 1 1 auto; min-height: 0; }
 .an-figure { background: var(--surface-0); border: 1px solid var(--line);
   border-radius: var(--r-md); padding: var(--s-3); display: flex;
-  align-items: center; justify-content: center; min-height: 0; }
+  flex-direction: column; align-items: stretch; justify-content: flex-start;
+  min-height: 0; overflow: hidden; }
 .anbody { width: 100%; height: 100%; max-height: 520px; }
 .anorgan { stroke: var(--line-strong); stroke-width: 1; cursor: pointer;
   transition: fill .12s linear; }
@@ -844,6 +847,6 @@ tr.diff > td { background: rgba(111, 159, 224, 0.07); }
   margin: var(--s-2) 0 0; max-width: 46ch; }
 .an-figure { flex-direction: column; }
 
-.an3d { position: relative; width: 100%; height: 440px; border-radius: var(--r-sm);
-  background: var(--surface-0); }
+.an3d { position: relative; width: 100%; flex: 1 1 auto; min-height: 460px;
+  border-radius: var(--r-sm); background: var(--surface-0); }
 @media (max-width: 1000px) { .an3d { height: 340px; } }
