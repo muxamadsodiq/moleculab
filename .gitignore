@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+*.db
+# The demo database IS committed: it carries the curated corpus the app ships with.
+!moleculab.db
+*.db-journal
+backups/
+.cache/
+models/
+*.pdf
+reports_audit/
+docs/
+.claude/
+scripts/__pycache__/

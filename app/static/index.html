@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MOLECULAB</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/design.css">
+</head>
+<body class="shell">
+  <header>
+    <div class="brand">MOLECU<span>LAB</span></div>
+    <form class="searchbar" id="searchform">
+      <input id="q" type="search" placeholder="Plant, compound, target, DOI, PMID…" autocomplete="off">
+      <button type="submit">Search</button>
+    </form>
+  </header>
+
+  <!-- Primary navigation. Kept as plain links so the hash router stays the single source of truth. -->
+  <nav class="rail" id="nav" aria-label="Primary">
+    <div class="rail-group">Start here</div>
+    <a href="#/bench" data-route="bench" class="primary-nav"><span class="ic">◉</span>Research Bench</a>
+    <a href="#/playground" data-route="playground"><span class="ic">⚙</span>Molecular Playground</a>
+    <div class="rail-group">Research</div>
+    <a href="#/workbench" data-route="workbench"><span class="ic">▣</span>Research Workbench</a>
+    <a href="#/" data-route=""><span class="ic">◈</span>Overview</a>
+    <a href="#/workspaces" data-route="workspaces"><span class="ic">◉</span>Investigations</a>
+    <a href="#/research" data-route="research"><span class="ic">◎</span>Discover</a>
+
+    <div class="rail-group">Scientific records</div>
+    <a href="#/diseases" data-route="diseases"><span class="ic">✚</span>Diseases</a>
+    <a href="#/targets" data-route="targets"><span class="ic">◉</span>Targets</a>
+    <a href="#/drugs" data-route="drugs"><span class="ic">℞</span>Drug Intelligence</a>
+    <a href="#/graph-explorer" data-route="graph-explorer"><span class="ic">⬢</span>Knowledge Graph</a>
+
+    <a href="#/plants" data-route="plants"><span class="ic">❧</span>Plants</a>
+    <a href="#/compounds" data-route="compounds"><span class="ic">⬡</span>Compounds</a>
+    <a href="#/evidence" data-route="evidence"><span class="ic">▤</span>Evidence</a>
+    <a href="#/publications" data-route="publications"><span class="ic">¶</span>Publications</a>
+    <a href="#/graph" data-route="graph"><span class="ic">⬢</span>Relationships</a>
+
+    <a href="#/boards" data-route="boards"><span class="ic">▦</span>Research Board</a>
+    <a href="#/elements" data-route="elements"><span class="ic">⚛</span>Elements</a>
+    <div class="rail-group">Computation</div>
+    <a href="#/studio" data-route="studio"><span class="ic">⬢</span>Molecular Studio</a>
+    <a href="#/simulations" data-route="simulations"><span class="ic">∿</span>Simulation Lab</a>
+    <a href="#/dosing" data-route="dosing"><span class="ic">◔</span>Dosing Lab</a>
+    <a href="#/anatomy" data-route="anatomy"><span class="ic">✱</span>Body Distribution</a>
+    <a href="#/formulations" data-route="formulations"><span class="ic">◧</span>Formulation Studio</a>
+    <a href="#/screening" data-route="screening"><span class="ic">▤</span>Virtual Screening</a>
+    <a href="#/repurposing" data-route="repurposing"><span class="ic">↻</span>Drug Repurposing</a>
+    <a href="#/materials" data-route="materials"><span class="ic">◈</span>Materials</a>
+    <a href="#/conditions" data-route="conditions"><span class="ic">∴</span>Conditions</a>
+
+    <div class="rail-group">Assistance</div>
+    <a href="#/demo" data-route="demo"><span class="ic">▶</span>Guided Demo</a>
+    <a href="#/assistant" data-route="assistant"><span class="ic">✦</span>AI Copilot</a>
+
+    <div class="rail-foot">
+      <div id="railstatus">MOLECULAB</div>
+    </div>
+  </nav>
+
+  <main id="view"><p class="empty">Loading…</p></main>
+
+  <!-- Vendored locally so molecular rendering works without internet access. -->
+  <script src="/static/vendor/3Dmol-min.js"></script>
+  <script src="/static/ui.js"></script>
+  <script src="/static/studio.js"></script>
+  <script src="/static/sim.js"></script>
+  <script src="/static/overview.js"></script>
+  <script src="/static/formulation.js"></script>
+  <script src="/static/drugs.js"></script>
+  <script src="/static/discovery.js"></script>
+  <script src="/static/elements.js"></script>
+  <script src="/static/board.js"></script>
+  <script src="/static/screening.js"></script>
+  <script src="/static/workbench.js"></script>
+  <script src="/static/materials.js"></script>
+  <script src="/static/conditions.js"></script>
+  <script src="/static/demo.js"></script>
+  <script src="/static/anatomy3d.js"></script>
+  <script src="/static/anatomy.js"></script>
+  <script src="/static/dosing.js"></script>
+  <script src="/static/landing.js"></script>
+  <script src="/static/bench.js"></script>
+  <script src="/static/playground.js"></script>
+  <script src="/static/benchai.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>

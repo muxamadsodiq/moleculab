@@ -1,0 +1,1206 @@
+{
+ "plants": {
+  "Capparis spinosa": {
+   "gbif_key": 6370689,
+   "accepted_gbif_key": 6370689,
+   "scientific_name": "Capparis spinosa L.",
+   "canonical_name": "Capparis spinosa",
+   "status": "ACCEPTED",
+   "match_type": "EXACT",
+   "confidence": 100,
+   "family": "Capparaceae",
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "gbif",
+    "request_url": "https://api.gbif.org/v1/species/match?name=Capparis+spinosa&kingdom=Plantae",
+    "retrieved_at": "2026-11-16T15:29:38+00:00"
+   }
+  },
+  "Glycyrrhiza glabra": {
+   "gbif_key": 2965732,
+   "accepted_gbif_key": 2965732,
+   "scientific_name": "Glycyrrhiza glabra L.",
+   "canonical_name": "Glycyrrhiza glabra",
+   "status": "ACCEPTED",
+   "match_type": "EXACT",
+   "confidence": 99,
+   "family": "Fabaceae",
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "gbif",
+    "request_url": "https://api.gbif.org/v1/species/match?name=Glycyrrhiza+glabra&kingdom=Plantae",
+    "retrieved_at": "2026-11-16T15:29:38+00:00"
+   }
+  },
+  "Artemisia annua": {
+   "gbif_key": 8373355,
+   "accepted_gbif_key": 8373355,
+   "scientific_name": "Artemisia annua L.",
+   "canonical_name": "Artemisia annua",
+   "status": "ACCEPTED",
+   "match_type": "EXACT",
+   "confidence": 99,
+   "family": "Asteraceae",
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "gbif",
+    "request_url": "https://api.gbif.org/v1/species/match?name=Artemisia+annua&kingdom=Plantae",
+    "retrieved_at": "2026-11-16T15:29:39+00:00"
+   }
+  },
+  "Ziziphora clinopodioides": {
+   "gbif_key": 7308799,
+   "accepted_gbif_key": 7308799,
+   "scientific_name": "Ziziphora clinopodioides Lam.",
+   "canonical_name": "Ziziphora clinopodioides",
+   "status": "ACCEPTED",
+   "match_type": "EXACT",
+   "confidence": 100,
+   "family": "Lamiaceae",
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "gbif",
+    "request_url": "https://api.gbif.org/v1/species/match?name=Ziziphora+clinopodioides&kingdom=Plantae",
+    "retrieved_at": "2026-11-16T15:29:39+00:00"
+   }
+  },
+  "Ferula tadshikorum": {
+   "gbif_key": 3636313,
+   "accepted_gbif_key": 3636313,
+   "scientific_name": "Ferula tadshikorum Pimenov",
+   "canonical_name": "Ferula tadshikorum",
+   "status": "ACCEPTED",
+   "match_type": "EXACT",
+   "confidence": 100,
+   "family": "Apiaceae",
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "gbif",
+    "request_url": "https://api.gbif.org/v1/species/match?name=Ferula+tadshikorum&kingdom=Plantae",
+    "retrieved_at": "2026-11-16T15:29:39+00:00"
+   }
+  }
+ },
+ "compounds": {
+  "1,8-cineole": {
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "pubchem",
+    "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/1%2C8-cineole/property/MolecularFormula,MolecularWeight,InChIKey,SMILES,ConnectivitySMILES,IUPACName/JSON",
+    "retrieved_at": "2026-11-16T15:29:41+00:00"
+   },
+   "candidates": 1,
+   "pubchem_cid": 2758,
+   "molecular_formula": "C10H18O",
+   "molecular_weight": 154.25,
+   "inchikey": "WEEGYLXZBRQIMU-UHFFFAOYSA-N",
+   "smiles": "CC1(C2CCC(O1)(CC2)C)C",
+   "iupac_name": "1,3,3-trimethyl-2-oxabicyclo[2.2.2]octane",
+   "synonyms": [
+    "Eucalyptol",
+    "cineole",
+    "1,8-Cineole",
+    "470-82-6",
+    "1,8-Cineol",
+    "Cajeputol",
+    "Eucalyptole",
+    "Eucapur"
+   ]
+  },
+  "8-acetoxy-5-hydroxyumbelliprenin": {
+   "ok": false,
+   "error": "not found",
+   "provenance": {
+    "source": "pubchem",
+    "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/8-acetoxy-5-hydroxyumbelliprenin/property/MolecularFormula,MolecularWeight,InChIKey,SMILES,ConnectivitySMILES,IUPACName/JSON",
+    "retrieved_at": "2026-11-16T15:29:41+00:00"
+   }
+  },
+  "artemisinic acid": {
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "pubchem",
+    "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/artemisinic%20acid/property/MolecularFormula,MolecularWeight,InChIKey,SMILES,ConnectivitySMILES,IUPACName/JSON",
+    "retrieved_at": "2026-11-16T15:29:42+00:00"
+   },
+   "candidates": 1,
+   "pubchem_cid": 10922465,
+   "molecular_formula": "C15H22O2",
+   "molecular_weight": 234.33,
+   "inchikey": "PLQMEXSCSAIXGB-SAXRGWBVSA-N",
+   "smiles": "C[C@@H]1CC[C@H]([C@@H]2[C@H]1CCC(=C2)C)C(=C)C(=O)O",
+   "iupac_name": "2-[(1R,4R,4aS,8aR)-4,7-dimethyl-1,2,3,4,4a,5,6,8a-octahydronaphthalen-1-yl]prop-2-enoic acid",
+   "synonyms": [
+    "Artemisinic acid",
+    "Artemisic acid",
+    "80286-58-4",
+    "(+)-artemisinic acid",
+    "2-[(1R,4R,4aS,8aR)-4,7-dimethyl-1,2,3,4,4a,5,6,8a-octahydronaphthalen-1-yl]prop-2-enoic acid",
+    "SINGLEEX ARTEMISINIC ACID",
+    "53N99527G7",
+    "CHEBI:63749"
+   ]
+  },
+  "artemisinin": {
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "pubchem",
+    "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/artemisinin/property/MolecularFormula,MolecularWeight,InChIKey,SMILES,ConnectivitySMILES,IUPACName/JSON",
+    "retrieved_at": "2026-11-16T15:29:43+00:00"
+   },
+   "candidates": 1,
+   "pubchem_cid": 68827,
+   "molecular_formula": "C15H22O5",
+   "molecular_weight": 282.33,
+   "inchikey": "BLUAFEHZUWYNDE-NNWCWBAJSA-N",
+   "smiles": "C[C@@H]1CC[C@H]2[C@H](C(=O)O[C@H]3[C@@]24[C@H]1CC[C@](O3)(OO4)C)C",
+   "iupac_name": "(1R,4S,5R,8S,9R,12S,13R)-1,5,9-trimethyl-11,14,15,16-tetraoxatetracyclo[10.3.1.04,13.08,13]hexadecan-10-one",
+   "synonyms": [
+    "artemisinin",
+    "63968-64-9",
+    "Qinghaosu",
+    "Huanghuahaosu",
+    "(+)-Artemisinin",
+    "Artemisinine",
+    "Artemisininum",
+    "Artemisinina"
+   ]
+  },
+  "carvacrol": {
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "pubchem",
+    "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/carvacrol/property/MolecularFormula,MolecularWeight,InChIKey,SMILES,ConnectivitySMILES,IUPACName/JSON",
+    "retrieved_at": "2026-11-16T15:29:44+00:00"
+   },
+   "candidates": 1,
+   "pubchem_cid": 10364,
+   "molecular_formula": "C10H14O",
+   "molecular_weight": 150.22,
+   "inchikey": "RECUKUPTGUEGMW-UHFFFAOYSA-N",
+   "smiles": "CC1=C(C=C(C=C1)C(C)C)O",
+   "iupac_name": "2-methyl-5-propan-2-ylphenol",
+   "synonyms": [
+    "CARVACROL",
+    "5-Isopropyl-2-methylphenol",
+    "499-75-2",
+    "Isopropyl-o-cresol",
+    "Antioxine",
+    "2-p-Cymenol",
+    "5-Isopropyl-o-cresol",
+    "2-Hydroxy-p-cymene"
+   ]
+  },
+  "dihydroartemisinic acid": {
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "pubchem",
+    "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/dihydroartemisinic%20acid/property/MolecularFormula,MolecularWeight,InChIKey,SMILES,ConnectivitySMILES,IUPACName/JSON",
+    "retrieved_at": "2026-11-16T15:29:45+00:00"
+   },
+   "candidates": 1,
+   "pubchem_cid": 11020893,
+   "molecular_formula": "C15H24O2",
+   "molecular_weight": 236.35,
+   "inchikey": "JYGAZEJXUVDYHI-DGTMBMJNSA-N",
+   "smiles": "C[C@@H]1CC[C@H]([C@@H]2[C@H]1CCC(=C2)C)[C@@H](C)C(=O)O",
+   "iupac_name": "(2R)-2-[(1R,4R,4aS,8aS)-4,7-dimethyl-1,2,3,4,4a,5,6,8a-octahydronaphthalen-1-yl]propanoic acid",
+   "synonyms": [
+    "dihydroartemisinic acid",
+    "85031-59-0",
+    "dihydroarteannuic acid",
+    "CHEBI:144078",
+    "RefChem:133722",
+    "Dihydro-artmisinic acid",
+    "Dihydroqinghao acid",
+    "(2R)-2-[(1R,4R,4aS,8aS)-4,7-dimethyl-1,2,3,4,4a,5,6,8a-octahydronaphthalen-1-yl]propanoic Acid"
+   ]
+  },
+  "galbanic acid": {
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "pubchem",
+    "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/galbanic%20acid/property/MolecularFormula,MolecularWeight,InChIKey,SMILES,ConnectivitySMILES,IUPACName/JSON",
+    "retrieved_at": "2026-11-16T15:29:46+00:00"
+   },
+   "candidates": 1,
+   "pubchem_cid": 7082474,
+   "molecular_formula": "C24H30O5",
+   "molecular_weight": 398.5,
+   "inchikey": "CVWWNYPTZYQCSE-YFBXQHAESA-N",
+   "smiles": "C[C@H]1CCC(=C(C)C)[C@@H]([C@@]1(C)COC2=CC3=C(C=C2)C=CC(=O)O3)CCC(=O)O",
+   "iupac_name": "3-[(1S,2S,3S)-2,3-dimethyl-2-[(2-oxochromen-7-yl)oxymethyl]-6-propan-2-ylidenecyclohexyl]propanoic acid",
+   "synonyms": [
+    "Galbanic acid",
+    "3566-55-0",
+    "Asacoumarin B",
+    "(-)-GALBANIC ACID",
+    "9OFS0HWC92",
+    "3-[(1S,2S,3S)-2,3-dimethyl-2-[(2-oxochromen-7-yl)oxymethyl]-6-propan-2-ylidenecyclohexyl]propanoic acid",
+    "DTXSID60189163",
+    "2-Cyclohexene-1-butanoic acid, 6-(((2-oxo-2H-1-benzopyran-7-yl)oxy)methyl)-alpha,2,3,6-tetramethyl-"
+   ]
+  },
+  "glabridin": {
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "pubchem",
+    "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/glabridin/property/MolecularFormula,MolecularWeight,InChIKey,SMILES,ConnectivitySMILES,IUPACName/JSON",
+    "retrieved_at": "2026-11-16T15:29:47+00:00"
+   },
+   "candidates": 1,
+   "pubchem_cid": 124052,
+   "molecular_formula": "C20H20O4",
+   "molecular_weight": 324.4,
+   "inchikey": "LBQIJVLKGVZRIW-ZDUSSCGKSA-N",
+   "smiles": "CC1(C=CC2=C(O1)C=CC3=C2OC[C@H](C3)C4=C(C=C(C=C4)O)O)C",
+   "iupac_name": "4-[(3R)-8,8-dimethyl-3,4-dihydro-2H-pyrano[2,3-f]chromen-3-yl]benzene-1,3-diol",
+   "synonyms": [
+    "Glabridin",
+    "59870-68-7",
+    "4-[(3R)-8,8-dimethyl-3,4-dihydro-2H-pyrano[2,3-f]chromen-3-yl]benzene-1,3-diol",
+    "CHEBI:5369",
+    "DTXSID00208589",
+    "HOC5567T41",
+    "4-(3,4-Dihydro-8,8-dimethyl-2H,8H-benzo(1,2-b:3,4-b')dipyran-3-yl)-1,3-benzenediol",
+    "1,3-Benzenediol, 4-(3,4-dihydro-8,8-dimethyl-2H,8H-benzo(1,2-b:3,4-b')dipyran-3-yl)-, (R)-"
+   ]
+  },
+  "glucocapparin": {
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "pubchem",
+    "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/glucocapparin/property/MolecularFormula,MolecularWeight,InChIKey,SMILES,ConnectivitySMILES,IUPACName/JSON",
+    "retrieved_at": "2026-11-16T15:29:48+00:00"
+   },
+   "candidates": 1,
+   "pubchem_cid": 21600408,
+   "molecular_formula": "C8H15NO9S2",
+   "molecular_weight": 333.3,
+   "inchikey": "UBTOEGCOMHAXGV-VECAIYLJSA-N",
+   "smiles": "C/C(=N/OS(=O)(=O)O)/S[C@H]1[C@@H]([C@H]([C@@H]([C@H](O1)CO)O)O)O",
+   "iupac_name": "[(2S,3R,4S,5S,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl] (1Z)-N-sulfooxyethanimidothioate",
+   "synonyms": [
+    "Glucocapparin",
+    "CHEBI:79328",
+    "methylglucosinolate",
+    "RefChem:922275",
+    "1-S-[(1Z)-N-(sulfooxy)ethanimidoyl]-1-thio-beta-D-glucopyranose",
+    "Glucoapparin (Methyl GS)",
+    "SCHEMBL29632794",
+    "NS00094459"
+   ]
+  },
+  "glycyrrhetinic acid": {
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "pubchem",
+    "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/glycyrrhetinic%20acid/property/MolecularFormula,MolecularWeight,InChIKey,SMILES,ConnectivitySMILES,IUPACName/JSON",
+    "retrieved_at": "2026-11-16T15:29:49+00:00"
+   },
+   "candidates": 1,
+   "pubchem_cid": 10114,
+   "molecular_formula": "C30H46O4",
+   "molecular_weight": 470.7,
+   "inchikey": "MPDGHEJMBKOTSU-YKLVYJNSSA-N",
+   "smiles": "C[C@]12CC[C@](C[C@H]1C3=CC(=O)[C@@H]4[C@]5(CC[C@@H](C([C@@H]5CC[C@]4([C@@]3(CC2)C)C)(C)C)O)C)(C)C(=O)O",
+   "iupac_name": "(2S,4aS,6aR,6aS,6bR,8aR,10S,12aS,14bR)-10-hydroxy-2,4a,6a,6b,9,9,12a-heptamethyl-13-oxo-3,4,5,6,6a,7,8,8a,10,11,12,14b-dodecahydro-1H-picene-2-carboxylic acid",
+   "synonyms": [
+    "enoxolone",
+    "471-53-4",
+    "Glycyrrhetic acid",
+    "GLYCYRRHETINIC ACID",
+    "Uralenic acid",
+    "18-beta-Glycyrrhetinic acid",
+    "Jintan",
+    "Rhetinic Acid"
+   ]
+  },
+  "glycyrrhizin": {
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "pubchem",
+    "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/glycyrrhizin/property/MolecularFormula,MolecularWeight,InChIKey,SMILES,ConnectivitySMILES,IUPACName/JSON",
+    "retrieved_at": "2026-11-16T15:29:50+00:00"
+   },
+   "candidates": 1,
+   "pubchem_cid": 14982,
+   "molecular_formula": "C42H62O16",
+   "molecular_weight": 822.9,
+   "inchikey": "LPLVUJXQOOQHMX-QWBHMCJMSA-N",
+   "smiles": "C[C@]12CC[C@](C[C@H]1C3=CC(=O)[C@@H]4[C@]5(CC[C@@H](C([C@@H]5CC[C@]4([C@@]3(CC2)C)C)(C)C)O[C@@H]6[C@@H]([C@H]([C@@H]([C@H](O6)C(=O)O)O)O)O[C@H]7[C@@H]([C@H]([C@@H]([C@H](O7)C(=O)O)O)O)O)C)(C)C(=O)O",
+   "iupac_name": "(2S,3S,4S,5R,6R)-6-[(2S,3R,4S,5S,6S)-2-[[(3S,4aR,6aR,6bS,8aS,11S,12aR,14aR,14bS)-11-carboxy-4,4,6a,6b,8a,11,14b-heptamethyl-14-oxo-2,3,4a,5,6,7,8,9,10,12,12a,14a-dodecahydro-1H-picen-3-yl]oxy]-6-carboxy-4,5-dihydroxyoxan-3-yl]oxy-3,4,5-trihydroxyoxane-2-carboxylic acid",
+   "synonyms": [
+    "Glycyrrhizic acid",
+    "glycyrrhizin",
+    "1405-86-3",
+    "Glycyrrhizinic acid",
+    "Glycyron",
+    "potenlini",
+    "beta-Glycyrrhizin",
+    "Glycyrrizin"
+   ]
+  },
+  "isoliquiritigenin": {
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "pubchem",
+    "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/isoliquiritigenin/property/MolecularFormula,MolecularWeight,InChIKey,SMILES,ConnectivitySMILES,IUPACName/JSON",
+    "retrieved_at": "2026-11-16T15:29:51+00:00"
+   },
+   "candidates": 1,
+   "pubchem_cid": 638278,
+   "molecular_formula": "C15H12O4",
+   "molecular_weight": 256.25,
+   "inchikey": "DXDRHHKMWQZJHT-FPYGCLRLSA-N",
+   "smiles": "C1=CC(=CC=C1/C=C/C(=O)C2=C(C=C(C=C2)O)O)O",
+   "iupac_name": "(E)-1-(2,4-dihydroxyphenyl)-3-(4-hydroxyphenyl)prop-2-en-1-one",
+   "synonyms": [
+    "isoliquiritigenin",
+    "961-29-5",
+    "(E)-1-(2,4-dihydroxyphenyl)-3-(4-hydroxyphenyl)prop-2-en-1-one",
+    "trihydroxychalcone",
+    "6'-deoxychalcone",
+    "2',4',4-Trihydroxychalcone",
+    "GU 17",
+    "Chalcone, 2',4,4'-trihydroxy-"
+   ]
+  },
+  "isoliquiritin": {
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "pubchem",
+    "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/isoliquiritin/property/MolecularFormula,MolecularWeight,InChIKey,SMILES,ConnectivitySMILES,IUPACName/JSON",
+    "retrieved_at": "2026-11-16T15:29:52+00:00"
+   },
+   "candidates": 1,
+   "pubchem_cid": 5318591,
+   "molecular_formula": "C21H22O9",
+   "molecular_weight": 418.4,
+   "inchikey": "YNWXJFQOCHMPCK-LXGDFETPSA-N",
+   "smiles": "C1=CC(=CC=C1/C=C/C(=O)C2=C(C=C(C=C2)O)O)O[C@H]3[C@@H]([C@H]([C@@H]([C@H](O3)CO)O)O)O",
+   "iupac_name": "(E)-1-(2,4-dihydroxyphenyl)-3-[4-[(2S,3R,4S,5S,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxyphenyl]prop-2-en-1-one",
+   "synonyms": [
+    "Isoliquiritin",
+    "5041-81-6",
+    "Isoliquiritoside",
+    "UNII-2Y348H1V4W",
+    "4-[(1E)-3-(2,4-dihydroxyphenyl)-3-oxoprop-1-en-1-yl]phenyl beta-D-glucopyranoside",
+    "CHEBI:80839",
+    "4-beta-D-glucopyranosyloxy-2',4'-dihydroxy-trans-chalcone",
+    "2-Propen-1-one, 1-(2,4-dihydroxyphenyl)-3-(4-(beta-D-glucopyranosyloxy)phenyl)-, (2E)-"
+   ]
+  },
+  "isomenthone": {
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "pubchem",
+    "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/isomenthone/property/MolecularFormula,MolecularWeight,InChIKey,SMILES,ConnectivitySMILES,IUPACName/JSON",
+    "retrieved_at": "2026-11-16T15:29:53+00:00"
+   },
+   "candidates": 1,
+   "pubchem_cid": 6432469,
+   "molecular_formula": "C10H18O",
+   "molecular_weight": 154.25,
+   "inchikey": "NFLGAXVYCFJBMK-IUCAKERBSA-N",
+   "smiles": "C[C@H]1CC[C@H](C(=O)C1)C(C)C",
+   "iupac_name": "cis-(2S,5S)-5-methyl-2-propan-2-ylcyclohexan-1-one",
+   "synonyms": [
+    "dl-Isomenthone",
+    "36977-92-1",
+    "P-MENTHAN-3-ONE, CIS",
+    "(+-)-isomenthone",
+    "alpha-ISOMENTHONE",
+    "Isomenthone, (+-)-",
+    "RefChem:40708",
+    "253-295-5"
+   ]
+  },
+  "kaempferol": {
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "pubchem",
+    "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/kaempferol/property/MolecularFormula,MolecularWeight,InChIKey,SMILES,ConnectivitySMILES,IUPACName/JSON",
+    "retrieved_at": "2026-11-16T15:29:54+00:00"
+   },
+   "candidates": 1,
+   "pubchem_cid": 5280863,
+   "molecular_formula": "C15H10O6",
+   "molecular_weight": 286.24,
+   "inchikey": "IYRMWMYZSQPJKC-UHFFFAOYSA-N",
+   "smiles": "C1=CC(=CC=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O",
+   "iupac_name": "3,5,7-trihydroxy-2-(4-hydroxyphenyl)chromen-4-one",
+   "synonyms": [
+    "kaempferol",
+    "520-18-3",
+    "Kaempherol",
+    "Robigenin",
+    "Rhamnolutein",
+    "Populnetin",
+    "Trifolitin",
+    "Indigo Yellow"
+   ]
+  },
+  "liquiritigenin": {
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "pubchem",
+    "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/liquiritigenin/property/MolecularFormula,MolecularWeight,InChIKey,SMILES,ConnectivitySMILES,IUPACName/JSON",
+    "retrieved_at": "2026-11-16T15:29:55+00:00"
+   },
+   "candidates": 1,
+   "pubchem_cid": 114829,
+   "molecular_formula": "C15H12O4",
+   "molecular_weight": 256.25,
+   "inchikey": "FURUXTVZLHCCNA-AWEZNQCLSA-N",
+   "smiles": "C1[C@H](OC2=C(C1=O)C=CC(=C2)O)C3=CC=C(C=C3)O",
+   "iupac_name": "(2S)-7-hydroxy-2-(4-hydroxyphenyl)-2,3-dihydrochromen-4-one",
+   "synonyms": [
+    "Liquiritigenin",
+    "578-86-9",
+    "(2S)-liquiritigenin",
+    "7,4'-Dihydroxyflavanone",
+    "(-)-liquiritigenin",
+    "(2S)-7-hydroxy-2-(4-hydroxyphenyl)-2,3-dihydrochromen-4-one",
+    "T194LKP9W6",
+    "(2S)-7-Hydroxy-2-(4-hydroxyphenyl)-2,3-dihydro-4H-1-benzopyran-4-one"
+   ]
+  },
+  "liquiritin": {
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "pubchem",
+    "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/liquiritin/property/MolecularFormula,MolecularWeight,InChIKey,SMILES,ConnectivitySMILES,IUPACName/JSON",
+    "retrieved_at": "2026-11-16T15:29:56+00:00"
+   },
+   "candidates": 1,
+   "pubchem_cid": 503737,
+   "molecular_formula": "C21H22O9",
+   "molecular_weight": 418.4,
+   "inchikey": "DEMKZLAVQYISIA-ZRWXNEIDSA-N",
+   "smiles": "C1[C@H](OC2=C(C1=O)C=CC(=C2)O)C3=CC=C(C=C3)O[C@H]4[C@@H]([C@H]([C@@H]([C@H](O4)CO)O)O)O",
+   "iupac_name": "(2S)-7-hydroxy-2-[4-[(2S,3R,4S,5S,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxyphenyl]-2,3-dihydrochromen-4-one",
+   "synonyms": [
+    "Liquiritin",
+    "551-15-5",
+    "Liquiritoside",
+    "7-Hydroxyflavanone 4'-O-glucoside",
+    "T0O79T74CD",
+    "CHEBI:80845",
+    "4',7-Dihydroxyflavanone 4'-(beta-D-glucopyranoside)",
+    "(2S)-7-hydroxy-2-[4-[(2S,3R,4S,5S,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxyphenyl]-2,3-dihydrochromen-4-one"
+   ]
+  },
+  "pulegone": {
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "pubchem",
+    "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/pulegone/property/MolecularFormula,MolecularWeight,InChIKey,SMILES,ConnectivitySMILES,IUPACName/JSON",
+    "retrieved_at": "2026-11-16T15:29:57+00:00"
+   },
+   "candidates": 1,
+   "pubchem_cid": 442495,
+   "molecular_formula": "C10H16O",
+   "molecular_weight": 152.23,
+   "inchikey": "NZGWDASTMWDZIW-MRVPVSSYSA-N",
+   "smiles": "C[C@@H]1CCC(=C(C)C)C(=O)C1",
+   "iupac_name": "(5R)-5-methyl-2-propan-2-ylidenecyclohexan-1-one",
+   "synonyms": [
+    "Pulegone",
+    "(+)-Pulegone",
+    "89-82-7",
+    "d-Pulegone",
+    "Pulegon",
+    "(+)-(R)-Pulegone",
+    "Pulegone, d-",
+    "(1R)-(+)-p-Menth-4(8)-en-3-one"
+   ]
+  },
+  "quercetin": {
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "pubchem",
+    "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/quercetin/property/MolecularFormula,MolecularWeight,InChIKey,SMILES,ConnectivitySMILES,IUPACName/JSON",
+    "retrieved_at": "2026-11-16T15:29:58+00:00"
+   },
+   "candidates": 1,
+   "pubchem_cid": 5280343,
+   "molecular_formula": "C15H10O7",
+   "molecular_weight": 302.23,
+   "inchikey": "REFJWTPEDVJJIY-UHFFFAOYSA-N",
+   "smiles": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O)O",
+   "iupac_name": "2-(3,4-dihydroxyphenyl)-3,5,7-trihydroxychromen-4-one",
+   "synonyms": [
+    "quercetin",
+    "117-39-5",
+    "Sophoretin",
+    "Meletin",
+    "Quercetol",
+    "Xanthaurine",
+    "Quercetine",
+    "Quertine"
+   ]
+  },
+  "rutin": {
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "pubchem",
+    "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/rutin/property/MolecularFormula,MolecularWeight,InChIKey,SMILES,ConnectivitySMILES,IUPACName/JSON",
+    "retrieved_at": "2026-11-16T15:29:59+00:00"
+   },
+   "candidates": 1,
+   "pubchem_cid": 5280805,
+   "molecular_formula": "C27H30O16",
+   "molecular_weight": 610.5,
+   "inchikey": "IKGXIBQEEMLURG-NVPNHPEKSA-N",
+   "smiles": "C[C@H]1[C@@H]([C@H]([C@H]([C@@H](O1)OC[C@@H]2[C@H]([C@@H]([C@H]([C@@H](O2)OC3=C(OC4=CC(=CC(=C4C3=O)O)O)C5=CC(=C(C=C5)O)O)O)O)O)O)O)O",
+   "iupac_name": "2-(3,4-dihydroxyphenyl)-5,7-dihydroxy-3-[(2S,3R,4S,5S,6R)-3,4,5-trihydroxy-6-[[(2R,3R,4R,5R,6S)-3,4,5-trihydroxy-6-methyloxan-2-yl]oxymethyl]oxan-2-yl]oxychromen-4-one",
+   "synonyms": [
+    "RUTIN",
+    "153-18-4",
+    "rutoside",
+    "Quercetin 3-rutinoside",
+    "Phytomelin",
+    "Birutan",
+    "Myrticolorin",
+    "Ilixanthin"
+   ]
+  },
+  "scopoletin": {
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "pubchem",
+    "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/scopoletin/property/MolecularFormula,MolecularWeight,InChIKey,SMILES,ConnectivitySMILES,IUPACName/JSON",
+    "retrieved_at": "2026-11-16T15:30:00+00:00"
+   },
+   "candidates": 1,
+   "pubchem_cid": 5280460,
+   "molecular_formula": "C10H8O4",
+   "molecular_weight": 192.17,
+   "inchikey": "RODXRVNMMDRFIK-UHFFFAOYSA-N",
+   "smiles": "COC1=C(C=C2C(=C1)C=CC(=O)O2)O",
+   "iupac_name": "7-hydroxy-6-methoxychromen-2-one",
+   "synonyms": [
+    "scopoletin",
+    "92-61-5",
+    "Gelseminic acid",
+    "7-Hydroxy-6-methoxy-2H-chromen-2-one",
+    "Scopoletol",
+    "6-Methylesculetin",
+    "Murrayetin",
+    "Scopoletine"
+   ]
+  },
+  "stachydrine": {
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "pubchem",
+    "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/stachydrine/property/MolecularFormula,MolecularWeight,InChIKey,SMILES,ConnectivitySMILES,IUPACName/JSON",
+    "retrieved_at": "2026-11-16T15:30:01+00:00"
+   },
+   "candidates": 1,
+   "pubchem_cid": 115244,
+   "molecular_formula": "C7H13NO2",
+   "molecular_weight": 143.18,
+   "inchikey": "CMUNUTVVOOHQPW-LURJTMIESA-N",
+   "smiles": "C[N+]1(CCC[C@H]1C(=O)[O-])C",
+   "iupac_name": "(2S)-1,1-dimethylpyrrolidin-1-ium-2-carboxylate",
+   "synonyms": [
+    "stachydrine",
+    "471-87-4",
+    "L-proline betaine",
+    "N,N-dimethyl-L-proline",
+    "methyl hygrate betaine",
+    "(-)-Stachydrine",
+    "(2S)-1,1-dimethylpyrrolidinium-2-carboxylate",
+    "S1L688345C"
+   ]
+  },
+  "thymol": {
+   "ok": true,
+   "error": null,
+   "provenance": {
+    "source": "pubchem",
+    "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/thymol/property/MolecularFormula,MolecularWeight,InChIKey,SMILES,ConnectivitySMILES,IUPACName/JSON",
+    "retrieved_at": "2026-11-16T15:30:02+00:00"
+   },
+   "candidates": 1,
+   "pubchem_cid": 6989,
+   "molecular_formula": "C10H14O",
+   "molecular_weight": 150.22,
+   "inchikey": "MGSRCZKZVOBKFT-UHFFFAOYSA-N",
+   "smiles": "CC1=CC(=C(C=C1)C(C)C)O",
+   "iupac_name": "5-methyl-2-propan-2-ylphenol",
+   "synonyms": [
+    "THYMOL",
+    "89-83-8",
+    "2-Isopropyl-5-methylphenol",
+    "5-Methyl-2-(1-methylethyl)phenol",
+    "Thyme camphor",
+    "5-Methyl-2-isopropylphenol",
+    "6-Isopropyl-m-cresol",
+    "3-p-Cymenol"
+   ]
+  }
+ },
+ "publications": {
+  "21372539": {
+   "doi": "10.1248/yakushi.131.423",
+   "crossref_ok": true,
+   "crossref_error": null,
+   "crossref": {
+    "doi": "10.1248/yakushi.131.423",
+    "title": "Anti-arthritic Active Fraction of &lt;i&gt;Capparis Spinosa&lt;/i&gt; L. Fruits and Its Chemical Constituents",
+    "authors": [
+     "FENG Xiaolu",
+     "LU Jincai",
+     "XIN Hailiang",
+     "ZHANG Lei",
+     "WANG Yuliang",
+     "TANG Kexuan"
+    ],
+    "year": 2011,
+    "journal": "YAKUGAKU ZASSHI",
+    "language": "en",
+    "url": "https://doi.org/10.1248/yakushi.131.423",
+    "type": "journal-article"
+   },
+   "provenance": {
+    "source": "crossref",
+    "request_url": "https://api.crossref.org/works/10.1248/yakushi.131.423",
+    "retrieved_at": "2026-11-16T15:30:04+00:00"
+   }
+  },
+  "26874255": {
+   "doi": "10.1016/j.jpba.2016.01.063",
+   "crossref_ok": true,
+   "crossref_error": null,
+   "crossref": {
+    "doi": "10.1016/j.jpba.2016.01.063",
+    "title": "An insight on the alkaloid content of Capparis spinosa L. root by HPLC-DAD-MS, MS/MS and 1H qNMR",
+    "authors": [
+     "Khatib Mohamad",
+     "Pieraccini Giuseppe",
+     "Innocenti Marzia",
+     "Melani Fabrizio",
+     "Mulinacci Nadia"
+    ],
+    "year": 2016,
+    "journal": "Journal of Pharmaceutical and Biomedical Analysis",
+    "language": "en",
+    "url": "https://doi.org/10.1016/j.jpba.2016.01.063",
+    "type": "journal-article"
+   },
+   "provenance": {
+    "source": "crossref",
+    "request_url": "https://api.crossref.org/works/10.1016/j.jpba.2016.01.063",
+    "retrieved_at": "2026-11-16T15:30:04+00:00"
+   }
+  },
+  "27489055": {
+   "doi": "10.1002/jms.3830",
+   "crossref_ok": true,
+   "crossref_error": null,
+   "crossref": {
+    "doi": "10.1002/jms.3830",
+    "title": "Metabolomic study of wild and cultivated caper (<i>Capparis spinosa</i> L.) from different areas of Sardinia and their comparative evaluation",
+    "authors": [
+     "Maldini Mariateresa",
+     "Foddai Marzia",
+     "Natella Fausta",
+     "Addis Roberta",
+     "Chessa Mario",
+     "Petretto Giacomo Luigi",
+     "Tuberoso Carlo I. G.",
+     "Pintore Giorgio"
+    ],
+    "year": 2016,
+    "journal": "Journal of Mass Spectrometry",
+    "language": "en",
+    "url": "https://doi.org/10.1002/jms.3830",
+    "type": "journal-article"
+   },
+   "provenance": {
+    "source": "crossref",
+    "request_url": "https://api.crossref.org/works/10.1002/jms.3830",
+    "retrieved_at": "2026-11-16T15:30:04+00:00"
+   }
+  },
+  "32483287": {
+   "doi": "10.1038/s41598-020-65815-2",
+   "crossref_ok": true,
+   "crossref_error": null,
+   "crossref": {
+    "doi": "10.1038/s41598-020-65815-2",
+    "title": "Identification and tissue-specific expression of rutin biosynthetic pathway genes in Capparis spinosa elicited with salicylic acid and methyl jasmonate",
+    "authors": [
+     "Kianersi Farzad",
+     "Abdollahi Mohammad Reza",
+     "Mirzaie-asl Asghar",
+     "Dastan Dara",
+     "Rasheed Faiza"
+    ],
+    "year": 2020,
+    "journal": "Scientific Reports",
+    "language": "en",
+    "url": "https://doi.org/10.1038/s41598-020-65815-2",
+    "type": "journal-article"
+   },
+   "provenance": {
+    "source": "crossref",
+    "request_url": "https://api.crossref.org/works/10.1038/s41598-020-65815-2",
+    "retrieved_at": "2026-11-16T15:30:05+00:00"
+   }
+  },
+  "36157770": {
+   "doi": "10.1021/acsomega.2c02850",
+   "crossref_ok": true,
+   "crossref_error": null,
+   "crossref": {
+    "doi": "10.1021/acsomega.2c02850",
+    "title": "Enzyme-Assisted Extraction of Phenolics from <i>Capparis spinosa</i> Fruit: Modeling and Optimization of the Process by RSM and ANN",
+    "authors": [
+     "Qadir Rahman",
+     "Anwar Farooq",
+     "Naseem Khalida",
+     "Tahir Mudassir Hussain",
+     "Alhumade Hesham"
+    ],
+    "year": 2022,
+    "journal": "ACS Omega",
+    "language": "en",
+    "url": "https://doi.org/10.1021/acsomega.2c02850",
+    "type": "journal-article"
+   },
+   "provenance": {
+    "source": "crossref",
+    "request_url": "https://api.crossref.org/works/10.1021/acsomega.2c02850",
+    "retrieved_at": "2026-11-16T15:30:05+00:00"
+   }
+  },
+  "37505209": {
+   "doi": "10.1002/cbdv.202300660",
+   "crossref_ok": true,
+   "crossref_error": null,
+   "crossref": {
+    "doi": "10.1002/cbdv.202300660",
+    "title": "Chemical Profiling and Antifungal Activity of <i>Ziziphora clinopodioides</i> Leaf Essential Oil against the Pathogen <i>Verticillium dahliae</i>",
+    "authors": [
+     "Han Caixia",
+     "Mei Yu",
+     "Zhou Shixing",
+     "Shao Hua"
+    ],
+    "year": 2023,
+    "journal": "Chemistry &amp; Biodiversity",
+    "language": "en",
+    "url": "https://doi.org/10.1002/cbdv.202300660",
+    "type": "journal-article"
+   },
+   "provenance": {
+    "source": "crossref",
+    "request_url": "https://api.crossref.org/works/10.1002/cbdv.202300660",
+    "retrieved_at": "2026-11-16T15:30:05+00:00"
+   }
+  },
+  "38547954": {
+   "doi": "10.1016/j.ijbiomac.2024.131114",
+   "crossref_ok": true,
+   "crossref_error": null,
+   "crossref": {
+    "doi": "10.1016/j.ijbiomac.2024.131114",
+    "title": "Optimization of Ziziphora clinopodioides L. essential oil nanoencapsulation in chitosan nanocomplex by response surface methodology",
+    "authors": [
+     "Kazeminia Masoud",
+     "Gandomi Hassan",
+     "Koohi Mohammad Kazem",
+     "Noori Negin",
+     "Khanjari Ali",
+     "Ehterami Anita"
+    ],
+    "year": 2024,
+    "journal": "International Journal of Biological Macromolecules",
+    "language": "en",
+    "url": "https://doi.org/10.1016/j.ijbiomac.2024.131114",
+    "type": "journal-article"
+   },
+   "provenance": {
+    "source": "crossref",
+    "request_url": "https://api.crossref.org/works/10.1016/j.ijbiomac.2024.131114",
+    "retrieved_at": "2026-11-16T15:30:06+00:00"
+   }
+  },
+  "38667552": {
+   "doi": "10.3390/jfb15040095",
+   "crossref_ok": true,
+   "crossref_error": null,
+   "crossref": {
+    "doi": "10.3390/jfb15040095",
+    "title": "Green Synthesis of Gold Nanoparticles Using Liquiritin and Other Phenolics from Glycyrrhiza glabra and Their Anti-Inflammatory Activity",
+    "authors": [
+     "Eltahir Ali O. E.",
+     "Lategan Kim L.",
+     "David Oladipupo M.",
+     "Pool Edmund J.",
+     "Luckay Robert C.",
+     "Hussein Ahmed A."
+    ],
+    "year": 2024,
+    "journal": "Journal of Functional Biomaterials",
+    "language": "en",
+    "url": "https://doi.org/10.3390/jfb15040095",
+    "type": "journal-article"
+   },
+   "provenance": {
+    "source": "crossref",
+    "request_url": "https://api.crossref.org/works/10.3390/jfb15040095",
+    "retrieved_at": "2026-11-16T15:30:06+00:00"
+   }
+  },
+  "38751789": {
+   "doi": "10.3389/fphar.2024.1345380",
+   "crossref_ok": true,
+   "crossref_error": null,
+   "crossref": {
+    "doi": "10.3389/fphar.2024.1345380",
+    "title": "Artemisinic acid attenuates osteoclast formation and titanium particle-induced osteolysis via inhibition of RANKL-induced ROS accumulation and MAPK and NF-κB signaling pathways",
+    "authors": [
+     "Gao Tian",
+     "Yu Chaohong",
+     "Shi Xiaofeng",
+     "Hu Yuehao",
+     "Chang Yongyun",
+     "Zhang Jingwei",
+     "Wang Yitian",
+     "Zhai Zanjing",
+     "Jia Xinlin",
+     "Mao Yuanqing"
+    ],
+    "year": 2024,
+    "journal": "Frontiers in Pharmacology",
+    "language": null,
+    "url": "https://doi.org/10.3389/fphar.2024.1345380",
+    "type": "journal-article"
+   },
+   "provenance": {
+    "source": "crossref",
+    "request_url": "https://api.crossref.org/works/10.3389/fphar.2024.1345380",
+    "retrieved_at": "2026-11-16T15:30:06+00:00"
+   }
+  },
+  "39065703": {
+   "doi": "10.3390/ph17070852",
+   "crossref_ok": true,
+   "crossref_error": null,
+   "crossref": {
+    "doi": "10.3390/ph17070852",
+    "title": "Neuroprotective Effects of Glycyrrhiza glabra Total Extract and Isolated Compounds",
+    "authors": [
+     "Eltahir Ali O. E.",
+     "Omoruyi Sylvester I.",
+     "Augustine Tanya N.",
+     "Luckay Robert C.",
+     "Hussein Ahmed A."
+    ],
+    "year": 2024,
+    "journal": "Pharmaceuticals",
+    "language": "en",
+    "url": "https://doi.org/10.3390/ph17070852",
+    "type": "journal-article"
+   },
+   "provenance": {
+    "source": "crossref",
+    "request_url": "https://api.crossref.org/works/10.3390/ph17070852",
+    "retrieved_at": "2026-11-16T15:30:07+00:00"
+   }
+  },
+  "40241179": {
+   "doi": "10.1186/s13065-025-01467-5",
+   "crossref_ok": true,
+   "crossref_error": null,
+   "crossref": {
+    "doi": "10.1186/s13065-025-01467-5",
+    "title": "Comparative phytochemical profiling and authentication of four Artemisia species using integrated GC-MS, HPTLC and NIR spectroscopy approach",
+    "authors": [
+     "Abdallah Ingy I.",
+     "Mahmoud Hebaalla A.",
+     "El-Sebakhy Nadia A.",
+     "Mahgoub Yasmin A."
+    ],
+    "year": 2025,
+    "journal": "BMC Chemistry",
+    "language": "en",
+    "url": "https://doi.org/10.1186/s13065-025-01467-5",
+    "type": "journal-article"
+   },
+   "provenance": {
+    "source": "crossref",
+    "request_url": "https://api.crossref.org/works/10.1186/s13065-025-01467-5",
+    "retrieved_at": "2026-11-16T15:30:07+00:00"
+   }
+  },
+  "40403321": {
+   "doi": "10.1002/cbdv.202500443",
+   "crossref_ok": true,
+   "crossref_error": null,
+   "crossref": {
+    "doi": "10.1002/cbdv.202500443",
+    "title": "Phenolic Composition and Phytochemical Analysis of Moroccan Raw and Processed <i>Capparis spinosa</i> Buds and Berries",
+    "authors": [
+     "El Amri Nidal",
+     "Chabir Rachida",
+     "Kachkoul Rabie",
+     "Bour Abdellatif"
+    ],
+    "year": 2025,
+    "journal": "Chemistry &amp; Biodiversity",
+    "language": "en",
+    "url": "https://doi.org/10.1002/cbdv.202500443",
+    "type": "journal-article"
+   },
+   "provenance": {
+    "source": "crossref",
+    "request_url": "https://api.crossref.org/works/10.1002/cbdv.202500443",
+    "retrieved_at": "2026-11-16T15:30:07+00:00"
+   }
+  },
+  "40923363": {
+   "doi": "10.1039/d5fo01743b",
+   "crossref_ok": true,
+   "crossref_error": null,
+   "crossref": {
+    "doi": "10.1039/d5fo01743b",
+    "title": "Glycyrrhizin alleviates renal damage in MRL/lpr mice by modulating gut microbiota dysbiosis and regulating the RTK-PKCα axis: insights from reverse network pharmacology",
+    "authors": [
+     "Huang Fugang",
+     "Sun Ke",
+     "Diao Lijia",
+     "Lu Keda",
+     "Fan Yongsheng",
+     "Xie Guanqun"
+    ],
+    "year": 2025,
+    "journal": "Food &amp; Function",
+    "language": "en",
+    "url": "https://doi.org/10.1039/d5fo01743b",
+    "type": "journal-article"
+   },
+   "provenance": {
+    "source": "crossref",
+    "request_url": "https://api.crossref.org/works/10.1039/d5fo01743b",
+    "retrieved_at": "2026-11-16T15:30:07+00:00"
+   }
+  },
+  "41321661": {
+   "doi": "10.1016/j.crphys.2025.100174",
+   "crossref_ok": true,
+   "crossref_error": null,
+   "crossref": {
+    "doi": "10.1016/j.crphys.2025.100174",
+    "title": "Exploration of neural mechanisms underlying antidepressant-like property of Ziziphora clinopodioides Lam. essential oil using mouse forced swimming test: Involvement of the monoaminergic systems",
+    "authors": [
+     "Ghaffarzadeh Shirabad Saeedeh",
+     "Alimohammadi Samad"
+    ],
+    "year": 2025,
+    "journal": "Current Research in Physiology",
+    "language": "en",
+    "url": "https://doi.org/10.1016/j.crphys.2025.100174",
+    "type": "journal-article"
+   },
+   "provenance": {
+    "source": "crossref",
+    "request_url": "https://api.crossref.org/works/10.1016/j.crphys.2025.100174",
+    "retrieved_at": "2026-11-16T15:30:08+00:00"
+   }
+  },
+  "41427242": {
+   "doi": "10.1021/acsomega.5c06842",
+   "crossref_ok": true,
+   "crossref_error": null,
+   "crossref": {
+    "doi": "10.1021/acsomega.5c06842",
+    "title": "Recovery and Economic Aspects of Extraction Methods for Artemisinin and its Precursors from\n                    <i>Artemisia annua</i>\n                    L. Leaves",
+    "authors": [
+     "Rodrigues Michelle Fernanda Faita",
+     "Simon Anna P.",
+     "Diedrich Camila",
+     "Dallacorte Lucas Vinicius",
+     "Fontoura Bruno Henrique",
+     "Camochena Rubia Cristiani",
+     "Carpes Solange Terezinha",
+     "Ferreira Jorge Freire da Silva",
+     "Marchese José Abramo"
+    ],
+    "year": 2025,
+    "journal": "ACS Omega",
+    "language": "en",
+    "url": "https://doi.org/10.1021/acsomega.5c06842",
+    "type": "journal-article"
+   },
+   "provenance": {
+    "source": "crossref",
+    "request_url": "https://api.crossref.org/works/10.1021/acsomega.5c06842",
+    "retrieved_at": "2026-11-16T15:30:08+00:00"
+   }
+  },
+  "41663704": {
+   "doi": "10.1038/s41598-026-39578-1",
+   "crossref_ok": true,
+   "crossref_error": null,
+   "crossref": {
+    "doi": "10.1038/s41598-026-39578-1",
+    "title": "Comprehensive phytochemical, anatomical and biological evaluation of Ziziphora clinopodioides Lam. (Lamiaceae), used as a traditional tea from Türkiye",
+    "authors": [
+     "Çeçen Ömer"
+    ],
+    "year": 2026,
+    "journal": "Scientific Reports",
+    "language": "en",
+    "url": "https://doi.org/10.1038/s41598-026-39578-1",
+    "type": "journal-article"
+   },
+   "provenance": {
+    "source": "crossref",
+    "request_url": "https://api.crossref.org/works/10.1038/s41598-026-39578-1",
+    "retrieved_at": "2026-11-16T15:30:09+00:00"
+   }
+  },
+  "42360980": {
+   "doi": "10.1080/14786419.2026.2690632",
+   "crossref_ok": true,
+   "crossref_error": null,
+   "crossref": {
+    "doi": "10.1080/14786419.2026.2690632",
+    "title": "Novel Mannich based derivatives of isoliquiritigenin and liquiritigenin, bioactive constituents of\n                    <i>Glycyrrhiza glabra</i>\n                    , as potent antimalarial agents",
+    "authors": [
+     "Jyoti",
+     "Khan Sana",
+     "Maji Subhasundar",
+     "Cheema Harveer Singh",
+     "Khan Feroz",
+     "Gaur Rashmi",
+     "Bhakuni Rajendra Singh"
+    ],
+    "year": 2026,
+    "journal": "Natural Product Research",
+    "language": "en",
+    "url": "https://doi.org/10.1080/14786419.2026.2690632",
+    "type": "journal-article"
+   },
+   "provenance": {
+    "source": "crossref",
+    "request_url": "https://api.crossref.org/works/10.1080/14786419.2026.2690632",
+    "retrieved_at": "2026-11-16T15:30:09+00:00"
+   }
+  },
+  "42449224": {
+   "doi": "10.1186/s12870-026-09493-8",
+   "crossref_ok": true,
+   "crossref_error": null,
+   "crossref": {
+    "doi": "10.1186/s12870-026-09493-8",
+    "title": "Phenotypic diversity and profiling of phenolic compounds in fruits of Iranian Capparis spinosa populations",
+    "authors": [
+     "Mohtashami Saeideh",
+     "Ghani Askar",
+     "Eghlima Ghasem"
+    ],
+    "year": 2026,
+    "journal": "BMC Plant Biology",
+    "language": "en",
+    "url": "https://doi.org/10.1186/s12870-026-09493-8",
+    "type": "journal-article"
+   },
+   "provenance": {
+    "source": "crossref",
+    "request_url": "https://api.crossref.org/works/10.1186/s12870-026-09493-8",
+    "retrieved_at": "2026-11-16T15:30:10+00:00"
+   }
+  },
+  "42513095": {
+   "doi": "10.3390/molecules31142411",
+   "crossref_ok": true,
+   "crossref_error": null,
+   "crossref": {
+    "doi": "10.3390/molecules31142411",
+    "title": "Selective Extraction of Lipophilic Bioactive Compounds from Industrial Root Meal of Glycyrrhiza glabra L.",
+    "authors": [
+     "Sanoev Akbar",
+     "Okhundedaev Bakhodir",
+     "Sham’yanov Ildar",
+     "Bobakulov Khayrulla",
+     "Zaripova Sayyora",
+     "Botirov Ruzali",
+     "Sadikov Alimjan",
+     "Sagdullayev Shamansur",
+     "Ali Farida",
+     "Garayev Eldar"
+    ],
+    "year": 2026,
+    "journal": "Molecules",
+    "language": "en",
+    "url": "https://doi.org/10.3390/molecules31142411",
+    "type": "journal-article"
+   },
+   "provenance": {
+    "source": "crossref",
+    "request_url": "https://api.crossref.org/works/10.3390/molecules31142411",
+    "retrieved_at": "2026-11-16T15:30:10+00:00"
+   }
+  },
+  "42796813": {
+   "doi": "10.3390/plants15182781",
+   "crossref_ok": true,
+   "crossref_error": null,
+   "crossref": {
+    "doi": "10.3390/plants15182781",
+    "title": "Combination of GC-MS, UHPLC-MS, and NMR Reveals Metabolic Differences Between the Oleo-Gum Resins of Ferula tadshikorum Pimenov and F. foetida (Bunge) Regel",
+    "authors": [
+     "Mamadalieva Nilufar Z.",
+     "Šoral Michal",
+     "Khojimatov Olim K.",
+     "Akramov Davlat K.",
+     "Frolov Andrej",
+     "Wessjohann Ludger A."
+    ],
+    "year": 2026,
+    "journal": "Plants",
+    "language": "en",
+    "url": "https://doi.org/10.3390/plants15182781",
+    "type": "journal-article"
+   },
+   "provenance": {
+    "source": "crossref",
+    "request_url": "https://api.crossref.org/works/10.3390/plants15182781",
+    "retrieved_at": "2026-11-16T15:30:10+00:00"
+   }
+  }
+ }
+}

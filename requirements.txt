@@ -1,0 +1,26 @@
+# Core runtime (versions verified on Python 3.14, 2026-11-16)
+fastapi==0.163.1
+starlette==1.10.0
+pydantic==2.14.3
+uvicorn==0.54.0
+SQLAlchemy==2.1.8
+httpx==0.28.1
+alembic==1.20.1
+Mako==1.4.3
+
+# Scientific computation (CPU only; cp314 wheels verified 2026-11-17).
+# RDKit: structure parsing, standardization, descriptors, fingerprints, Murcko scaffolds,
+# conformer embedding (ETKDG) and force-field optimisation (MMFF94/UFF).
+rdkit==2026.9.2
+# numpy is RDKit's own requirement, pinned here so the version is reproducible.
+numpy==2.5.5
+
+# REMOVED 2026-11-18: scipy, pandas and scikit-learn were added in anticipation of a QSAR model
+# that was never shipped (the JAK1 dataset audit found an inter-laboratory noise floor large enough
+# that no model could be justified yet). An import scan found zero references to any of them in
+# app/ or scripts/, and pip reports nothing depends on pandas or scikit-learn. They are omitted
+# rather than carried as ~200 MB of unused install weight. Restore them when a model is actually
+# implemented:
+#   scipy==1.18.1
+#   pandas==3.1.1
+#   scikit-learn==1.9.1

@@ -1,0 +1,98 @@
+{
+  "_note": "Accepted names and families are resolved against GBIF by scripts/enrich_seed.py. Vernacular (ru/uz/en) names are curator-supplied and stay 'unverified' until a citation is attached.",
+  "plants": [
+    {
+      "accepted_name": "Capparis spinosa",
+      "notes": "Caper; wild in Central Asian foothills and deserts. Phenolic profiles differ between published populations.",
+      "aliases": [
+        {
+          "name": "Каперсы колючие",
+          "language": "ru",
+          "script": "cyrl",
+          "alias_type": "vernacular"
+        },
+        {
+          "name": "Kovul",
+          "language": "uz",
+          "script": "latn",
+          "alias_type": "vernacular"
+        },
+        {
+          "name": "Caper",
+          "language": "en",
+          "script": "latn",
+          "alias_type": "common"
+        }
+      ]
+    },
+    {
+      "accepted_name": "Glycyrrhiza glabra",
+      "aliases": [
+        {
+          "name": "Солодка голая",
+          "language": "ru",
+          "script": "cyrl",
+          "alias_type": "vernacular"
+        },
+        {
+          "name": "Qizilmiya",
+          "language": "uz",
+          "script": "latn",
+          "alias_type": "vernacular"
+        },
+        {
+          "name": "Licorice",
+          "language": "en",
+          "script": "latn",
+          "alias_type": "common"
+        },
+        {
+          "name": "Liquorice",
+          "language": "en",
+          "script": "latn",
+          "alias_type": "common"
+        }
+      ]
+    },
+    {
+      "accepted_name": "Artemisia annua",
+      "aliases": [
+        {
+          "name": "Полынь однолетняя",
+          "language": "ru",
+          "script": "cyrl",
+          "alias_type": "vernacular"
+        },
+        {
+          "name": "Sweet wormwood",
+          "language": "en",
+          "script": "latn",
+          "alias_type": "common"
+        }
+      ]
+    },
+    {
+      "accepted_name": "Ziziphora clinopodioides",
+      "notes": "Essential-oil composition differs strongly between published samples (see evidence records).",
+      "aliases": [
+        {
+          "name": "Зизифора пахучковидная",
+          "language": "ru",
+          "script": "cyrl",
+          "alias_type": "vernacular"
+        },
+        {
+          "name": "Kiyiko't",
+          "language": "uz",
+          "script": "latn",
+          "alias_type": "vernacular"
+        }
+      ]
+    },
+    {
+      "accepted_name": "Ferula tadshikorum",
+      "notes": "Central Asian Ferula species; oleo-gum resin studied in 2026. No vernacular names recorded yet (known gap).",
+      "aliases": []
+    }
+  ]
+}

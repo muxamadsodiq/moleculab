@@ -1,0 +1,9 @@
+BodyParts3D, Copyright 2008 Life Science Integrated Database Center licensed by CC Display-Inheritance 2.1 Japan
+
+Licence: CC BY-SA 2.1 Japan
+https://creativecommons.org/licenses/by-sa/2.1/jp/deed.en
+
+Source: https://lifesciencedb.jp/bp3d/
+Mirror: https://github.com/Kevin-Mattheus-Moerman/BodyParts3D
+
+Share-alike: any derivative of these meshes must carry the same licence.

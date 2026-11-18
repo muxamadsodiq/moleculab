@@ -1,0 +1,8 @@
+-r requirements.txt
+pytest==9.1.1
+
+# Business-document generation (scripts/make_business_pdf.py). Build-time only: the application
+# itself never imports these, so they are dev dependencies, not runtime ones.
+reportlab==5.1.0
+pypdf==7.1.0
+pypdfium2==5.15.2

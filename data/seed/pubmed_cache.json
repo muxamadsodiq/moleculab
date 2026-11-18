@@ -1,0 +1,539 @@
+[
+ {
+  "pmid": "39065703",
+  "title": "Neuroprotective Effects of Glycyrrhiza glabra Total Extract and Isolated Compounds.",
+  "authors": [
+   "Eltahir AOE",
+   "Omoruyi SI",
+   "Augustine TN",
+   "Luckay RC",
+   "Hussein AA"
+  ],
+  "year": 2024,
+  "journal": "Pharmaceuticals (Basel, Switzerland)",
+  "doi": "10.3390/ph17070852",
+  "language": "eng",
+  "abstract": "Glycyrrhiza glabra L. is a plant commonly utilized in herbal medicine and stands out as one of the more extensively researched medicinal plants globally. It has been documented with respect to several pharmacological activities, notably, neuroprotective effects, among others. However, the neuroprotective activity of pure phenolic compounds has not been reported yet. The chromatographic of a methanolic extract yielded twenty-two compounds, viz.: naringenin 4'-O-glucoside (1), 3',4',7-trihydroxyflavanone (butin) (2), liquiritin (3), liquiritin apioside (4), abyssinone (5), glabrol (6), isoliquiritin (7), neoisoliquiritin (8), isoliquiritin apioside (9), licuraside (10). 3'[O], 4'-(2,2-dimethylpyrano)-3,7-dihydroxyflavanone (11), glabrocoumarin (12), glabrene (13), isomedicarpin (14), 7-hydroxy-4'-methoxyflavone (formononetin) (15), ononin (16), glycyroside (17), (3S)-7,4'-dihydroxy-2'-methoxyisoflavan (18), glabridin (19), neoliquiritin (20), 3,11-dioxooleana-1,12-dien-29-oic acid (21), and 3-oxo-18β-glycyrrhetinic acid (22). The results of the neuroprotection evaluation showed that G. glabra total extract (TE) and compounds 1, 7, 11, 16, and 20 protected SH-SY5Y cells by inhibiting the depletion of ATP and elevated caspase 3/7 activities induced by MPP+. Indeed, this study reports for the first time the structure and activity of compound 11 and the neuroprotective activity of some phenolic constituents from G. glabra.",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/39065703/",
+  "publication_types": [
+   "Journal Article"
+  ],
+  "_provenance": {
+   "source": "pubmed",
+   "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?tool=moleculab&db=pubmed&id=41175894%2C31763212%2C31153601%2C36422593%2C39559199%2C42417936%2C41120634%2C42331715%2C39065703%2C38667552&retmode=xml",
+   "retrieved_at": "2026-11-16T15:22:33+00:00"
+  }
+ },
+ {
+  "pmid": "38667552",
+  "title": "Green Synthesis of Gold Nanoparticles Using Liquiritin and Other Phenolics from Glycyrrhiza glabra and Their Anti-Inflammatory Activity.",
+  "authors": [
+   "Eltahir AOE",
+   "Lategan KL",
+   "David OM",
+   "Pool EJ",
+   "Luckay RC",
+   "Hussein AA"
+  ],
+  "year": 2024,
+  "journal": "Journal of functional biomaterials",
+  "doi": "10.3390/jfb15040095",
+  "language": "eng",
+  "abstract": "Phenolic compounds are the main phytochemical constituents of many higher plants. They play an important role in synthesizing metal nanoparticles using green technology due to their ability to reduce metal salts and stabilize them through physical interaction/conjugation to the metal surface. Six pure phenolic compounds were isolated from licorice (Glycyrrhiza glabra) and employed in synthesizing gold nanoparticles (AuNPs). The isolated compounds were identified as liquiritin (1), isoliquiritin (2), neoisoliquiritin (3), isoliquiritin apioside (4), liquiritin apioside (5), and glabridin (6). The synthesized AuNPs were characterized using UV, zeta sizer, HRTEM, and IR and tested for their stability in different biological media. The phenolic isolates and their corresponding synthesized NP conjugates were tested for their potential in vitro cytotoxicity. The anti-inflammatory effects were investigated in both normal and inflammation-induced settings, where inflammatory biomarkers were stimulated using lipopolysaccharides (LPSs) in the RAW 264.7 macrophage cell line. LPS, functioning as a mitogen, promotes cell growth by reducing apoptosis, potentially contributing to observed outcomes. Results indicated that all six pure phenolic isolates inhibited cell proliferation. The AuNP conjugates of all the phenolic isolates, except liquiritin apioside (5), inhibited cell viability. LPS initiates inflammatory markers by binding to cell receptors and setting off a cascade of events leading to inflammation. All the pure phenolic isolates, except isoliquiritin, neoisoliquiritin, and isoliquiritin apioside inhibited the inflammatory activity of RAW cells in vitro.",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/38667552/",
+  "publication_types": [
+   "Journal Article"
+  ],
+  "_provenance": {
+   "source": "pubmed",
+   "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?tool=moleculab&db=pubmed&id=41175894%2C31763212%2C31153601%2C36422593%2C39559199%2C42417936%2C41120634%2C42331715%2C39065703%2C38667552&retmode=xml",
+   "retrieved_at": "2026-11-16T15:22:33+00:00"
+  }
+ },
+ {
+  "pmid": "42360980",
+  "title": "Novel Mannich based derivatives of isoliquiritigenin and liquiritigenin, bioactive constituents of Glycyrrhiza glabra, as potent antimalarial agents.",
+  "authors": [
+   "Jyoti",
+   "Khan S",
+   "Maji S",
+   "Cheema HS",
+   "Khan F",
+   "Gaur R",
+   "Bhakuni RS"
+  ],
+  "year": 2026,
+  "journal": "Natural product research",
+  "doi": "10.1080/14786419.2026.2690632",
+  "language": "eng",
+  "abstract": "Isoliquiritigenin and liquiritigenin were isolated from the plant Glycyrrhiza glabra. Fourteen new mannich-based derivatives of ISL and LTG were synthesised. Derivatives 3, 5 and 7 showed good antimalarial activity with IC50= 0.16, 0.37 and 0.53 μM respectively which was far better than the parent molecule ISL (IC50= 11.71 μM). Compound 12 (IC50= 1.67 μM) showed ten times better activity than the parent molecule, LTG (IC50= 15.62 μM). Integrated computational analyses including molecular docking, ADMET prediction, density functional theory (DFT), and molecular dynamics (MD) simulations were performed to elucidate their mechanism of action. Active derivatives showed strong binding to PfDHFR-TS with docking energies of -9.2 to -10.7 kcal/mol and consistent interactions with key catalytic residues (Asp54, Phe58, Ser108). DFT results indicated that potent compounds possess favourable frontier orbital energies, balanced hardness, and suitable electrophilicity, supporting stable protein ligand interactions, while 100 ns MD simulations confirmed stable complex formation through consistent RMSD, compactness, and persistent interactions.",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42360980/",
+  "publication_types": [
+   "Journal Article"
+  ],
+  "_provenance": {
+   "source": "pubmed",
+   "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?tool=moleculab&db=pubmed&id=42360980%2C42513095%2C40923363%2C40969544%2C40241179%2C41427242%2C38751789%2C37505209%2C41321661%2C41663704&retmode=xml",
+   "retrieved_at": "2026-11-16T15:22:33+00:00"
+  }
+ },
+ {
+  "pmid": "42513095",
+  "title": "Selective Extraction of Lipophilic Bioactive Compounds from Industrial Root Meal of Glycyrrhiza glabra L.",
+  "authors": [
+   "Sanoev A",
+   "Okhundedaev B",
+   "Sham'yanov I",
+   "Bobakulov K",
+   "Zaripova S",
+   "Botirov R",
+   "Sadikov A",
+   "Sagdullayev S",
+   "Ali F",
+   "Garayev E"
+  ],
+  "year": 2026,
+  "journal": "Molecules (Basel, Switzerland)",
+  "doi": "10.3390/molecules31142411",
+  "language": "eng",
+  "abstract": "Licorice (Glycyrrhiza glabra L.) root meal generated after industrial extraction of water-soluble constituents represents an underutilized secondary plant resource rich in lipophilic bioactive compounds. In this study, an efficient approach for the comprehensive recovery of hydrophobic biologically active substances from licorice root meal was developed. The method is based on sequential ethanol extraction followed by selective fractionation using a petroleum ether-ethyl acetate solvent system and chromatographic purification. As a result, a lipid fraction (1.1%) containing phytosterols (β-sitosterol and stigmasterol) was obtained, while the pharmacologically important isoflavan glabridin was isolated with a purity of 87.9% and a yield of 0.17%. In addition, triterpenoid aglycones, including 3-oxoglycyrrhetinic acid (0.39%) and glycyrrhetinic acid (0.21%), were successfully isolated and structurally confirmed by IR and NMR spectroscopy. Comparative solvent studies demonstrated that ethanol provides the highest extraction yield (7.1%) while maintaining high levels of glabridin and total flavonoids in the extracts. The results indicate that licorice root meal is a valuable secondary source of lipophilic bioactive compounds, and the proposed approach enables more efficient utilization of plant raw materials, reduction of industrial waste, and development of sustainable technologies for obtaining pharmacologically valuable compounds for pharmaceutical, cosmetic, and biomedical applications.",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42513095/",
+  "publication_types": [
+   "Journal Article"
+  ],
+  "_provenance": {
+   "source": "pubmed",
+   "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?tool=moleculab&db=pubmed&id=42360980%2C42513095%2C40923363%2C40969544%2C40241179%2C41427242%2C38751789%2C37505209%2C41321661%2C41663704&retmode=xml",
+   "retrieved_at": "2026-11-16T15:22:33+00:00"
+  }
+ },
+ {
+  "pmid": "40923363",
+  "title": "Glycyrrhizin alleviates renal damage in MRL/lpr mice by modulating gut microbiota dysbiosis and regulating the RTK-PKCα axis: insights from reverse network pharmacology.",
+  "authors": [
+   "Huang F",
+   "Sun K",
+   "Diao L",
+   "Lu K",
+   "Fan Y",
+   "Xie G"
+  ],
+  "year": 2025,
+  "journal": "Food & function",
+  "doi": "10.1039/d5fo01743b",
+  "language": "eng",
+  "abstract": "The present investigation elucidates the therapeutic potential of glycyrrhizin, the predominant triterpene saponin isolated from Glycyrrhiza glabra (licorice), in the management of systemic lupus erythematosus (SLE), an autoimmune disorder characterized by multisystemic involvement and therapeutic recalcitrance. Comprehensive interrogation of multiple disease-specific databases facilitated the identification of crucial SLE-associated molecular targets and hub genes, with MAPK1, MAPK3, TP53, JUN, and JAK2 demonstrating the highest degree of network centrality. Subsequent molecular docking simulations and binding affinity assessments revealed compounds with exceptional complementarity to these pivotal molecular targets, establishing Glycyrrhiza glabra as a pharmacologically promising botanical source and glycyrrhizin as its principal bioactive constituent meriting comprehensive mechanistic investigation. Experimental validation employing the MRL/lpr murine lupus model demonstrated that glycyrrhizin treatment significantly diminished circulating autoantibody titers and markedly ameliorated the characteristic glomerulonephritis and tubular interstitial damage associated with lupus nephritis. Concomitant 16S rDNA gene sequencing-based microbiome profiling revealed that glycyrrhizin administration induced substantial modulation of the intestinal microbial ecosystem, specifically attenuating the abundance of Ruminococcus genus, a bacterial taxon previously implicated in the pathogenesis and exacerbation of lupus nephritis. Transcriptomic analysis utilizing Gene Expression Omnibus (GEO) repository datasets confirmed glycyrrhizin's profound regulatory effects on calcium signaling pathways. Mechanistically, glycyrrhizin suppresses renal receptor tyrosine kinase (RTK)-protein kinase C alpha (PKCα) axis activation, thereby interrupting key inflammatory and fibrotic signaling cascades. Collectively, these findings provide compelling evidence that glycyrrhizin confers nephroprotective effects in lupus nephritis through orchestrated dual mechanisms: (1) restoration of gut microbiota homeostasis, and (2) suppression of the renal RTK-PKCα signaling axis, thereby attenuating inflammatory cascades and preserving renal architectural integrity. These mechanistic insights advance our understanding of glycyrrhizin's therapeutic potential and establish a robust scientific foundation for its clinical translation in SLE management strategies.",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/40923363/",
+  "publication_types": [
+   "Journal Article"
+  ],
+  "_provenance": {
+   "source": "pubmed",
+   "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?tool=moleculab&db=pubmed&id=42360980%2C42513095%2C40923363%2C40969544%2C40241179%2C41427242%2C38751789%2C37505209%2C41321661%2C41663704&retmode=xml",
+   "retrieved_at": "2026-11-16T15:22:33+00:00"
+  }
+ },
+ {
+  "pmid": "40969544",
+  "title": "In-silico identification of COX-2 inhibitory phytochemicals from traditional medicinal plants: molecular docking, dynamics, and safety predictions.",
+  "authors": [
+   "Abdollahi F",
+   "Hadizadeh F",
+   "Farhadian S",
+   "Assaran-Darban R",
+   "Shakour N"
+  ],
+  "year": 2025,
+  "journal": "In silico pharmacology",
+  "doi": "10.1007/s40203-025-00407-4",
+  "language": "eng",
+  "abstract": "UNLABELLED: Inflammation is an essential biological response that facilitates tissue repair and immune defense; however, chronic inflammation is associated with numerous pathological conditions, including cardiovascular diseases, autoimmune disorders, and cancer. Cyclooxygenase-2 (COX-2) is a key enzyme in this process, catalyzing the synthesis of pro-inflammatory prostaglandins, thus representing a critical target for anti-inflammatory therapies. Conventional COX-2 inhibitors, particularly non-steroidal anti-inflammatory drugs (NSAIDs), often have significant side effects, creating an urgent need for safer alternatives. This in-silico study evaluates the binding affinities of bioactive compounds from Gmelina arborea, Coriandrum sativum, Glycyrrhiza glabra, Terminalia chebula, Solanum nigrum, Vernonia cinerea, Portulaca oleracea, Azadirachta indica, and Thespesia populnea to the COX-2 receptor. Molecular docking and dynamics simulations identified solasonine, solamargine, rutin, and glycyrrhizin as having binding affinities ranging from - 9.40 to - 8.50 kcal/mol, exceeding that of the standard NSAID diclofenac (- 5.68 kcal/mol). While these docking results provide valuable insights, further in-vitro validation is necessary. Stability analysis of ligand-receptor complexes showed minimal structural fluctuations. Moreover, cardiotoxicity predictions indicated that solamargine, rutin, and glycyrrhizin present a lower risk compared to diclofenac. ADMET profiling highlighted favorable pharmacokinetic properties for rutin, suggesting its potential as a promising COX-2 inhibitor with a beneficial safety profile. Subsequent MM-GBSA calculations revealed binding free energy values of - 11.316 kcal/mol for rutin and - 35.190 kcal/mol for diclofenac, indicating strong binding interactions. Overall, this study underscores the potential of these natural compounds as safer alternatives in anti-inflammatory therapy, paving the way for future experimental validation and clinical application. SUPPLEMENTARY INFORMATION: The online version contains supplementary material available at 10.1007/s40203-025-00407-4.",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/40969544/",
+  "publication_types": [
+   "Journal Article"
+  ],
+  "_provenance": {
+   "source": "pubmed",
+   "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?tool=moleculab&db=pubmed&id=42360980%2C42513095%2C40923363%2C40969544%2C40241179%2C41427242%2C38751789%2C37505209%2C41321661%2C41663704&retmode=xml",
+   "retrieved_at": "2026-11-16T15:22:33+00:00"
+  }
+ },
+ {
+  "pmid": "40241179",
+  "title": "Comparative phytochemical profiling and authentication of four Artemisia species using integrated GC-MS, HPTLC and NIR spectroscopy approach.",
+  "authors": [
+   "Abdallah II",
+   "Mahmoud HA",
+   "El-Sebakhy NA",
+   "Mahgoub YA"
+  ],
+  "year": 2025,
+  "journal": "BMC chemistry",
+  "doi": "10.1186/s13065-025-01467-5",
+  "language": "eng",
+  "abstract": "Genus Artemisia has diverse phytochemistry and a long history in traditional medicine with several species still having unexplored potential. Hence, comparative profiling of Artemisia species in Egypt (A. annua, A. herba-alba, A. monosperma and A. judaica) and their authentication is of great interest. An integrated approach of GC-MS, HPTLC-image analysis and near-infrared (NIR) spectroscopy was implemented for their fingerprinting, discrimination and authentication. GC-MS analysis revealed the phytochemical profile of their volatile oils identifying compounds spanning monoterpenes, sesquiterpenes, diterpenes and non-terpenoid compounds. The major chemical components were highlighted as camphor, β-caryophyllene and germacrene D in A. annua, camphene, cis-pinocarveol, trans-chrysanthenyl acetate and cis-chrysanthenyl acetate in A. herba-alba, α-pinene, β-pinene, α-terpinolene and (-)-spathulenol in A. monosperma, finally, camphor, piperitone and trans-ethyl cinnamate in A. judaica. HPTLC-image analysis allowed tracking chemical markers in their total alcoholic extracts. Artemisinin was detected only in A. annua while scopoletin was identified as a major characteristic coumarin in Artemisia species. Phenolic acids and flavonoids were also discovered in the different species. Finally, NIR spectroscopy allowed profiling and authentication of their powders revealing prominent spectral characteristics correlated to the chemical markers identified by GC-MS and HPTLC. Then, multivariate analysis facilitated classification and discrimination of the species. Additionally, PLS regression analysis was utilized for quality control of powdered A. annua, being an important industrial crop, by detecting its adulteration with other species in limits of detection less than 1.5%. This combined approach aided in the rapid comparative profiling of the Artemisia species as a mean for their fingerprinting and authentication.",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/40241179/",
+  "publication_types": [
+   "Journal Article"
+  ],
+  "_provenance": {
+   "source": "pubmed",
+   "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?tool=moleculab&db=pubmed&id=42360980%2C42513095%2C40923363%2C40969544%2C40241179%2C41427242%2C38751789%2C37505209%2C41321661%2C41663704&retmode=xml",
+   "retrieved_at": "2026-11-16T15:22:33+00:00"
+  }
+ },
+ {
+  "pmid": "41427242",
+  "title": "Recovery and Economic Aspects of Extraction Methods for Artemisinin and its Precursors from Artemisia annua L. Leaves.",
+  "authors": [
+   "Rodrigues MFF",
+   "Simon AP",
+   "Diedrich C",
+   "Dallacorte LV",
+   "Fontoura BH",
+   "Camochena RC",
+   "Carpes ST",
+   "Ferreira JFDS",
+   "Marchese JA"
+  ],
+  "year": 2025,
+  "journal": "ACS omega",
+  "doi": "10.1021/acsomega.5c06842",
+  "language": "eng",
+  "abstract": "A bibliometric analysis of Artemisia annua L. research revealed substantial variability in extraction methods and solvents, underscoring the absence of standardized protocols. This methodological inconsistency can lead to differences in extract composition, reducing the reproducibility and comparability of research outcomes. The present study evaluated the recovery and economic aspects of extraction methods and solvents for artemisinin (ART), dihydroartemisinic acid (DHAA), and artemisinic acid (AA) from A. annua L. leaves. The extraction methods assessed were  Refluxer (R), Ultra-Turrax Disperser (D), Shaker (S), and Ultrasound Bath (U) use three solvents: petroleum ether (PE), acetonitrile (ACN), and 70% ethanol (ET). Target compounds were quantified by high-performance liquid chromatography with diode-array detection (HPLC-DAD). ACN was the most efficient in extracting all three compounds, making it the most suitable for analytical and precision-oriented applications. However, ET was identified as a safer, renewable and cost-effective alternative, particularly for ART extraction, and can also enable the coextraction of antioxidant flavonoids with potential pharmaceutical relevance. Among the methods tested, the D technique offered the best balance for laboratory-scale use, combining fast extraction with low solvent consumption and minimal equipment cost.",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/41427242/",
+  "publication_types": [
+   "Journal Article"
+  ],
+  "_provenance": {
+   "source": "pubmed",
+   "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?tool=moleculab&db=pubmed&id=42360980%2C42513095%2C40923363%2C40969544%2C40241179%2C41427242%2C38751789%2C37505209%2C41321661%2C41663704&retmode=xml",
+   "retrieved_at": "2026-11-16T15:22:33+00:00"
+  }
+ },
+ {
+  "pmid": "38751789",
+  "title": "Artemisinic acid attenuates osteoclast formation and titanium particle-induced osteolysis via inhibition of RANKL-induced ROS accumulation and MAPK and NF-κB signaling pathways.",
+  "authors": [
+   "Gao T",
+   "Yu C",
+   "Shi X",
+   "Hu Y",
+   "Chang Y",
+   "Zhang J",
+   "Wang Y",
+   "Zhai Z",
+   "Jia X",
+   "Mao Y"
+  ],
+  "year": 2024,
+  "journal": "Frontiers in pharmacology",
+  "doi": "10.3389/fphar.2024.1345380",
+  "language": "eng",
+  "abstract": "Periprosthetic osteolysis (PPO) is the most common cause of joint arthroplasty failure. Its progression involves both biological and mechanical factors. Osteoclastogenesis induced by wear from debris-cell interactions, ultimately leading to excessive bone erosion, is considered the primary cause of PPO; therefore, targeting osteoclasts is a promising treatment approach. Currently available drugs have various side effects and limitations. Artemisinic acid (ArA) is a sesquiterpene isolated from the traditional herb Artemisia annua L. that has various pharmacological effects, such as antimalarial, anti-inflammatory, and antioxidant activities. Therefore, this study was aimed at investigating the effect of ArA on osteoclast formation and bone resorption function in vitro, as well as wear particle-induced osteolysis in vivo, and to explore its molecular mechanism of action. Here, we report that ArA inhibits RANKL-stimulated osteoclast formation and function. Mechanistically, ArA suppresses intracellular reactive oxygen species levels by activating the antioxidant response via nuclear factor erythroid-2-related factor 2 (Nrf2) pathway upregulation. It also inhibits the mitogen-activated kinases (MAPK) and nuclear factor-κB (NF-κB) pathways, as well as the transcription and expression of NFATc1 and c-Fos. In vivo experiments demonstrated that ArA reduces osteoclast formation and alleviates titanium particle-induced calvarial osteolysis. Collectively, our study highlights that ArA, with its osteoprotective and antioxidant effects, is a promising therapeutic agent for preventing and treating PPO and other osteoclast-mediated osteolytic diseases.",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/38751789/",
+  "publication_types": [
+   "Journal Article"
+  ],
+  "_provenance": {
+   "source": "pubmed",
+   "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?tool=moleculab&db=pubmed&id=42360980%2C42513095%2C40923363%2C40969544%2C40241179%2C41427242%2C38751789%2C37505209%2C41321661%2C41663704&retmode=xml",
+   "retrieved_at": "2026-11-16T15:22:33+00:00"
+  }
+ },
+ {
+  "pmid": "37505209",
+  "title": "Chemical Profiling and Antifungal Activity of Ziziphora clinopodioides Leaf Essential Oil against the Pathogen Verticillium dahliae.",
+  "authors": [
+   "Han C",
+   "Mei Y",
+   "Zhou S",
+   "Shao H"
+  ],
+  "year": 2023,
+  "journal": "Chemistry & biodiversity",
+  "doi": "10.1002/cbdv.202300660",
+  "language": "eng",
+  "abstract": "Essential oils (EOs) are often used as natural antifungal agents to control the growth of phytopathogenic fungi. The aim of this study was to determine the effect of Ziziphora clinopodioides leaf EO against Verticillium dahliae, a pathogenic fungus of cotton. Gas chromatography-mass spectrometry (GC/MS) analysis revealed the presence of 15 compounds of the total of extracted oil, which was consisted of 98.79 % monoterpenes and 0.61 % sesquiterpenes. The major constituents were pulegone (62.17 %), isomenthone (18.42 %), l-menthone (5.55 %) and piperitenone (3.99 %). The mycelial growth of Verticillium dahliae was completely inhibited at 0.24 μL/mL air under vapor phase condition. Considerable morphological variations were also observed in the fungal sclerotia at the contact phase at 3 μL/mL. This study demonstrated for the first time that Z. clinopodioides EO can effectively inhibit the growth of V. dahliae, implying that it has the potential to be explored as an antifungal agent against Verticillium Wilt of cotton.",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/37505209/",
+  "publication_types": [
+   "Journal Article"
+  ],
+  "_provenance": {
+   "source": "pubmed",
+   "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?tool=moleculab&db=pubmed&id=42360980%2C42513095%2C40923363%2C40969544%2C40241179%2C41427242%2C38751789%2C37505209%2C41321661%2C41663704&retmode=xml",
+   "retrieved_at": "2026-11-16T15:22:33+00:00"
+  }
+ },
+ {
+  "pmid": "41321661",
+  "title": "Exploration of neural mechanisms underlying antidepressant-like property of Ziziphora clinopodioides Lam. essential oil using mouse forced swimming test: Involvement of the monoaminergic systems.",
+  "authors": [
+   "Ghaffarzadeh Shirabad S",
+   "Alimohammadi S"
+  ],
+  "year": 2025,
+  "journal": "Current research in physiology",
+  "doi": "10.1016/j.crphys.2025.100174",
+  "language": "eng",
+  "abstract": "OBJECTIVE: Ziziphora clinopodioides has been valued in Iranian traditional medicine for various medicinal applications. This novel study was conducted to assess the antidepressant-like effect of the essential oil of Ziziphora clinopodioides (EOZC) and to identify the possible mechanisms contributing to this action through forced swimming test (FST). METHODS: The chemical profile of EOZC obtained by GC-MS. The mice received EOZC (10, 20, and 40 mg/kg) 1 h before the FST intraperitoneally. Moreover, naloxone (non-selective antagonist for opioid receptor subtypes, 1 mg/kg), prazosin (α1-adrenergic receptor antagonist, 1 mg/kg), yohimbine (α2-adrenergic receptor antagonist, 1 mg/kg), propranolol (β-adrenergic receptor antagonist, 2 mg/kg), WAY100635 (selective 5-HT1A receptor antagonist, 0.1 mg/kg), ondansetron (5-HT3 receptor antagonist, 1 mg/kg), haloperidol (non-selective dopamine receptor blocker, 0.2 mg/kg), SCH23390 (selective dopamine D1 receptor blocker, 0.05 mg/kg), sulpiride (selective dopamine D2 receptor blocker, 50 mg/kg) and flumazenil (GABAA/BDZ receptor antagonist, 10 mg/kg) were used to ascertain the neural pathways implicated in the antidepressant-like response of EOZC. RESULTS: The GC-MS evaluation demonstrated that predominant components of EOZC comprised carvacrol (65.22 %), thymol (19.51 %), p-cymene (4.86 %), γ-terpinene (4.63 %) and E-Caryophyllene (1.07 %). EOZC exhibited a significant dose-dependent effect that resulted in a marked decrease in the duration of immobility time (P < 0.05). The antidepressant-like action of EOZC was reversed by prazosin, yohimbine, WAY100635, ondansetron, haloperidol, SCH23390 and sulpiride. However, this effect remained unaffected by naloxone, propranolol and flumazenil. CONCLUSION: These findings indicate that EOZC elicits antidepressant-like response, which relies on its interaction with noradrenergic, serotonergic and dopaminergic pathways.",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/41321661/",
+  "publication_types": [
+   "Journal Article"
+  ],
+  "_provenance": {
+   "source": "pubmed",
+   "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?tool=moleculab&db=pubmed&id=42360980%2C42513095%2C40923363%2C40969544%2C40241179%2C41427242%2C38751789%2C37505209%2C41321661%2C41663704&retmode=xml",
+   "retrieved_at": "2026-11-16T15:22:33+00:00"
+  }
+ },
+ {
+  "pmid": "41663704",
+  "title": "Comprehensive phytochemical, anatomical and biological evaluation of Ziziphora clinopodioides Lam. (Lamiaceae), used as a traditional tea from Türkiye.",
+  "authors": [
+   "Çeçen Ö"
+  ],
+  "year": 2026,
+  "journal": "Scientific reports",
+  "doi": "10.1038/s41598-026-39578-1",
+  "language": "eng",
+  "abstract": "This study provides a comprehensive investigation of Ziziphora clinopodioides Lam. (Lamiaceae) from Türkiye, focusing on its phytochemical composition, biological activities, and anatomical characteristics relevant to its potential as a functional food ingredient. Methanol and aqueous extractions yielded 28.09% and 30.91%, respectively, calculated based on the dry weight of the plant material. Essential oil analysis identified 98.3% of the total composition, with oxygenated monoterpenes, particularly 1,8-cineole (28.2%), terpinen-4-ol (12.0%), and pulegone (7.9%), as dominant constituents. Enzyme inhibition assays revealed α-amylase inhibition of 29.3% by the essential oil, calculated based on the tested sample concentration, and moderate cholinesterase inhibition by the methanolic extract; however, all activities were lower than those of the reference drugs. Morphological analysis confirmed the plant as a mat-forming perennial with dense hirsuteness and capitate inflorescences. Leaf anatomy showed amphistomatic, bifacial structure with diverse trichome types and a well-organized vascular system. The stem anatomy exhibited a quadrangular structure with varied glandular and non-glandular trichomes, developed collenchyma, and a distinct endodermis. The findings of this research could shed light on the medicinal value of Z. clinopodioides, and open up new possibilities for its use in various food products or therapeutic applications.",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/41663704/",
+  "publication_types": [
+   "Journal Article"
+  ],
+  "_provenance": {
+   "source": "pubmed",
+   "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?tool=moleculab&db=pubmed&id=42360980%2C42513095%2C40923363%2C40969544%2C40241179%2C41427242%2C38751789%2C37505209%2C41321661%2C41663704&retmode=xml",
+   "retrieved_at": "2026-11-16T15:22:33+00:00"
+  }
+ },
+ {
+  "pmid": "38547954",
+  "title": "Optimization of Ziziphora clinopodioides L. essential oil nanoencapsulation in chitosan nanocomplex by response surface methodology.",
+  "authors": [
+   "Kazeminia M",
+   "Gandomi H",
+   "Koohi MK",
+   "Noori N",
+   "Khanjari A",
+   "Ehterami A"
+  ],
+  "year": 2024,
+  "journal": "International journal of biological macromolecules",
+  "doi": "10.1016/j.ijbiomac.2024.131114",
+  "language": "eng",
+  "abstract": "Nano-encapsulation of essential oils, a specific area of interest, can help overcome challenges associated with their commercial use. This study aimed to evaluate the effect of different concentrations of chitosan, Ziziphora clinopodioides L. essential oil (ZcEO), and Sodium-Tri Polyphosphate (TPP), both individually and in interaction, on several properties of EO-loaded chitosan nanoparticles. These properties include particle size (PS), zeta potential (ZP), and encapsulation efficiency (EE) using a two-stage emulsion-ionic gelation approach. The optimization of the parameters was done by response surface methodology using Box-Behnken design. The chemical composition of ZcEO was analyzed as well. The primary compounds in ZcEO were found to be pulegone (29.24 %), 1,3-dimethyl-2-(2-methylpropylidene) imidazolidine (9.05 %), piperitenone (6.65 %), thymol (5.38 %), and carvacrol (5.27 %). The PS ranged from 117.33 to 4934.1 nm, the ZP varied from -1.1 to -30.83 mV, and the EE spanned from 31.74 to 87.04 %. The results showed that an increase in the initial EO content led to a decrease in PS and ZP, but an increase in EE. Moreover, increasing the TPP concentration resulted in an enhancement in PS, ZP, and EE, whereas increasing the Chs concentration led to a slight increase in PS, ZP, and EE. Furthermore, the results of this study proved the interaction effect of different parameters on the responses investigated. Under optimized conditions, the optimal concentrations of chitosan, ZcEO and TPP were attained at 6.768, 6.078, and 7.595 mg/mL respectively. This resulted in a PS of 117.331 nm, a ZP of -20.949 mV, and an EE of 75.385 %. In conclusion, the results suggest that adjusting the concentrations of Chs, EO, and TPP is an effective approach to controlling the properties of NPs and optimizing their performance.",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/38547954/",
+  "publication_types": [
+   "Journal Article"
+  ],
+  "_provenance": {
+   "source": "pubmed",
+   "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?tool=moleculab&db=pubmed&id=38547954%2C42796813&retmode=xml",
+   "retrieved_at": "2026-11-16T15:22:34+00:00"
+  }
+ },
+ {
+  "pmid": "42796813",
+  "title": "Combination of GC-MS, UHPLC-MS, and NMR Reveals Metabolic Differences Between the Oleo-Gum Resins of Ferula tadshikorum Pimenov and F. foetida (Bunge) Regel.",
+  "authors": [
+   "Mamadalieva NZ",
+   "Šoral M",
+   "Khojimatov OK",
+   "Akramov DK",
+   "Frolov A",
+   "Wessjohann LA"
+  ],
+  "year": 2026,
+  "journal": "Plants (Basel, Switzerland)",
+  "doi": "10.3390/plants15182781",
+  "language": "eng",
+  "abstract": "Background: Central Asia is a key center of diversity for Ferula species, including Ferula foetida and Ferula tadshikorum, which are important but insufficiently characterized sources of oleo-gum resins. Methods: The oleo-gum resins of F. tadshikorum (OGRFT) and F. foetida (OGRFF) were analyzed using HS-GC-MS, UHPLC-MS, and NMR. Results: A total of 40 compounds were detected by HS-GC-MS, representing 94% and 97% of the volatiles in F. foetida and F. tadshikorum, respectively. The major volatile constituents of the resins were disulfides. RP-UHPLC-ESI-QqTOF-MS/MS tentatively identified 51 compounds, including sesquiterpene coumarins, sesquiterpenes, sulfides, phenolics and fatty acids in both OGRFT and OGRFF. NMR (1D and 2D) confirmed the identity of five major compounds and provided complete signal assignments for their potential quantification. UHPLC-MS revealed that OGRFF was rich in foetisulfide A, followed by daucane sesquiterpenes and esters of sesquiterpenes and fatty acids, while OGRFT was dominated by galbanic acid and 8-acetoxy-5-hydroxyumbelliprenin, as confirmed by both UHPLC-MS and NMR. Anthelmintic, antifungal, and cytotoxic assays demonstrated that the oleo-gum resins were non-toxic, at least in the in vitro test systems addressed. Conclusions: This study provides the first comprehensive metabolite profiling of oleo-gum resins from F. foetida and F. tadshikorum, revealing distinct chemical compositions and supporting the preferential use of F. tadshikorum in food applications. Advanced analytical approaches (HS-GC-MS, UHPLC-MS/MS, and NMR) identified key marker compounds, particularly sesquiterpene coumarins, enabling reliable differentiation, standardization and quality control.",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42796813/",
+  "publication_types": [
+   "Journal Article"
+  ],
+  "_provenance": {
+   "source": "pubmed",
+   "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?tool=moleculab&db=pubmed&id=38547954%2C42796813&retmode=xml",
+   "retrieved_at": "2026-11-16T15:22:34+00:00"
+  }
+ },
+ {
+  "pmid": "40403321",
+  "title": "Phenolic Composition and Phytochemical Analysis of Moroccan Raw and Processed Capparis spinosa Buds and Berries.",
+  "authors": [
+   "El Amri N",
+   "Chabir R",
+   "Kachkoul R",
+   "Bour A"
+  ],
+  "year": 2025,
+  "journal": "Chemistry & biodiversity",
+  "doi": "10.1002/cbdv.202500443",
+  "language": "eng",
+  "abstract": "Capparis spinosa, also known as spiny caper, is a widely distributed plant in Mediterranean regions, valued for its nutritional and medicinal properties. Its richness in bioactive compounds, particularly polyphenols, makes it a subject of interest for various therapeutic applications. This study aims to characterize the phenolic compounds present in raw and processed caper buds and berries and evaluate their antioxidant potential. The identification of phenolic compounds, performed by ultra-high-performance liquid chromatography coupled with mass spectrometry, revealed the presence of flavonoids, mainly flavonols (rutin, quercetin, kaempferol, myricetin, and isorhamnetin), as well as phenolic acids such as sinapic acid, para-coumaric acid, ferulic acid, and vanillic acid. The results of the spectrophotometric quantification of total polyphenols and total flavonoids showed that raw capers contain the highest concentrations of polyphenols and flavonoids, with values ranging between 86.19 mg gallic acid equivalent/g DW and 31.29 mg quercetin equivalent/g DW, respectively. Fermented caperberries present the lowest concentrations. The evaluation of the antioxidant potential, performed by in vitro 2,2-diphenyl-1-picrylhydrazyl and ferric reducing antioxidant power tests, demonstrated strong antioxidant activity in different extracts, particularly in raw capers, which is correlated with their high content of phenolic compounds. These findings highlight the potential of Moroccan C. spinosa as a natural source of antioxidants, with possible applications in the development of functional foods, nutraceuticals, and natural health products.",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/40403321/",
+  "publication_types": [
+   "Journal Article"
+  ],
+  "_provenance": {
+   "source": "pubmed",
+   "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?tool=moleculab&db=pubmed&id=40403321%2C42449224%2C26874255%2C21372539%2C36157770%2C27489055%2C32483287&retmode=xml",
+   "retrieved_at": "2026-11-16T15:28:10+00:00"
+  }
+ },
+ {
+  "pmid": "42449224",
+  "title": "Phenotypic diversity and profiling of phenolic compounds in fruits of Iranian Capparis spinosa populations.",
+  "authors": [
+   "Mohtashami S",
+   "Ghani A",
+   "Eghlima G"
+  ],
+  "year": 2026,
+  "journal": "BMC plant biology",
+  "doi": "10.1186/s12870-026-09493-8",
+  "language": "eng",
+  "abstract": "Capparis spinosa L. (Capparaceae) is a medicinally important perennial species rich in bioactive compounds, particularly phenolics and flavonoids, which exhibit remarkable antioxidant and therapeutic properties. Despite its economic and pharmacological importance, comprehensive information on the agro-morphological diversity and phenolic composition of Iranian wild populations remains limited. Therefore, this study aimed to characterize the agro-morphological traits, phytochemical composition, phenolic profiles, carbohydrate content, and antioxidant activity of fruits from thirteen natural populations of C. spinosa collected in Fars Province, Iran. Substantial variation was observed among populations for fruit-related traits and biochemical characteristics, indicating considerable intraspecific diversity. Population CS11 exhibited superior fruit characteristics, whereas total phenolic, flavonoid, tannin, and carbohydrate contents varied markedly among populations. Antioxidant activity also differed significantly and was positively associated with phenolic accumulation. HPLC analysis identified twelve major phenolic compounds, with quercetin, ellagic acid, hesperidin, catechin, and sinapic acid being the predominant constituents. Multivariate analyses revealed significant relationships between phytochemical traits and antioxidant capacity and demonstrated that environmental factors, particularly temperature, altitude, precipitation, and sunshine duration, strongly influenced trait expression and phenolic composition. The integration of agro-morphological, phytochemical, and environmental analyses provides new insights into the diversity of Iranian C. spinosa germplasm and highlights valuable populations for conservation, domestication, breeding programs, and pharmaceutical exploitation.",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42449224/",
+  "publication_types": [
+   "Journal Article"
+  ],
+  "_provenance": {
+   "source": "pubmed",
+   "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?tool=moleculab&db=pubmed&id=40403321%2C42449224%2C26874255%2C21372539%2C36157770%2C27489055%2C32483287&retmode=xml",
+   "retrieved_at": "2026-11-16T15:28:10+00:00"
+  }
+ },
+ {
+  "pmid": "26874255",
+  "title": "An insight on the alkaloid content of Capparis spinosa L. root by HPLC-DAD-MS, MS/MS and (1)H qNMR.",
+  "authors": [
+   "Khatib M",
+   "Pieraccini G",
+   "Innocenti M",
+   "Melani F",
+   "Mulinacci N"
+  ],
+  "year": 2016,
+  "journal": "Journal of pharmaceutical and biomedical analysis",
+  "doi": "10.1016/j.jpba.2016.01.063",
+  "language": "eng",
+  "abstract": "The Capparis spinosa L. has a wide distribution in the Old World from South Europe, North and East Africa, Madagascar, Southwest and Central Asia to Australia and Oceania. The consolidated traditional use of C. spinosa root as remedy against different pains in human is well known since the antiquity. Various secondary metabolites have been found in caper plant, nevertheless, few studies have been focused to the analysis of root constituents. To date, several free and glycosilated spermidine alkaloids and a more polar alkaloid, the stachydrine, have been isolated from the root of C. spinosa. Aim of this work was to improve the knowledge on the alkaloid content of the root of a Syrian sample of C. spinosa by HPLC-DAD-MS(n) and to propose methods to quantify these molecules in different raw extracts. A decoction, an hydroalcoholic extraction and a fractionation process to selectively recover the spermidine alkaloids were applied. To our knowledge, this is the first HPLC-DAD-MS(n) profile that pointed out the co-presence of stachydrine, several isobaric forms of capparispine and/or capparisine in free and glycosylated forms and some isobars of isocodonocarpine or codonocarpine as monoglycosides in extracts of C. spinosa root. The determination by HPLC/DAD for the spermidine alkaloids expressed as p-OH-coumaric acid gave values up to 3.5mg/g dried root and the stachydrine evaluated by (1)H NMR was close to 12.5mg/g dried root. Overall, the total alkaloids were almost doubled in hydroalcoholic extract with respect to the decoction, and the stachydrine in the cortex was almost double than in the whole root.",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/26874255/",
+  "publication_types": [
+   "Journal Article"
+  ],
+  "_provenance": {
+   "source": "pubmed",
+   "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?tool=moleculab&db=pubmed&id=40403321%2C42449224%2C26874255%2C21372539%2C36157770%2C27489055%2C32483287&retmode=xml",
+   "retrieved_at": "2026-11-16T15:28:10+00:00"
+  }
+ },
+ {
+  "pmid": "21372539",
+  "title": "Anti-arthritic active fraction of Capparis spinosa L. fruits and its chemical constituents.",
+  "authors": [
+   "Feng X",
+   "Lu J",
+   "Xin H",
+   "Zhang L",
+   "Wang Y",
+   "Tang K"
+  ],
+  "year": 2011,
+  "journal": "Yakugaku zasshi : Journal of the Pharmaceutical Society of Japan",
+  "doi": "10.1248/yakushi.131.423",
+  "language": "eng",
+  "abstract": "The aim of this study was to ascertain the anti-arthritic active fraction of Capparis spinosa L. (Capparidaceae) fruits and its chemical constituents. The adjuvant arthritic rat model was developed to evaluate the anti-arthritic effects of different fractions of ethanol extraction from C. spinosa L. The fraction eluted by ethanol-water (50:50, v/v) had the most significant anti-arthritic activity. The chemical constituents of this fraction were therefore studied; seven known compounds were isolated and identified as: P-hydroxy benzoic acid; 5-(hydroxymethyl) furfural; bis(5-formylfurfuryl) ether; daucosterol; α-D-fructofuranosides methyl; uracil; and stachydrine.",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/21372539/",
+  "publication_types": [
+   "Journal Article"
+  ],
+  "_provenance": {
+   "source": "pubmed",
+   "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?tool=moleculab&db=pubmed&id=40403321%2C42449224%2C26874255%2C21372539%2C36157770%2C27489055%2C32483287&retmode=xml",
+   "retrieved_at": "2026-11-16T15:28:10+00:00"
+  }
+ },
+ {
+  "pmid": "36157770",
+  "title": "Enzyme-Assisted Extraction of Phenolics from Capparis spinosa Fruit: Modeling and Optimization of the Process by RSM and ANN.",
+  "authors": [
+   "Qadir R",
+   "Anwar F",
+   "Naseem K",
+   "Tahir MH",
+   "Alhumade H"
+  ],
+  "year": 2022,
+  "journal": "ACS omega",
+  "doi": "10.1021/acsomega.2c02850",
+  "language": "eng",
+  "abstract": "The current study intends to appraise the effect of enzyme complexes on the recovery of phenolics from Capparis spinosa fruit extract using the response surface methodology (RSM) and artificial neural networking (ANN). Enzymatic treatment of C. spinosa fruit extract was optimized under a set of conditions (enzyme concentration, pH, temperature, and time) against each enzyme formulation such as Kemzyme Plus Dry, Natuzyme, and Zympex-014. The extract yield observed for Kemzyme Plus Dry (42.00%) was noted to be higher than those for Zympex-014 (39.80%) and Natuzyme (38.50%). Based on the higher results, the values of Kemzyme Plus Dry-based extract were further employed in different parameters of RSM. The F-value (16.03) and p-values (<0.05) implied that the selected model is significant. Similarly, the higher values for the coefficient of determination (R 2) at 0.9740 and adjusted R 2 (adj. R 2) at 0.9132 indicated that the model is significant in relation to given experimental parameters. ANN-predicted values were very close to the experimental values, which demonstrated the applicability of the ANN model. Antioxidant activities also exhibited profound results in terms of total phenolic content values (24.76 mg GAE/g), total flavonoid content values (24.56 mg CE/g), and the 2,2-diphenyl-1-picrylhydrazyl (DPPH) assay (IC50) (5.12 mg/mL). Scanning electron microscopy revealed that after enzymatic hydrolysis, the cell walls were broken as compared with nonhydrolyzed materials. Five phenolics, namely, quercetin, m-coumaric acid, sinapic acid, kaempferol, and p-coumaric acid, were identified from C. spinosa extract by gas chromatography-mass spectrometry (GC/MS). The results of this study reveal that the proposed optimization techniques, using Kemzyme Plus Dry among others, had a positive effect on the recovery of phenolic bioactive compounds and thus increased the antioxidant potential of C. spinosa fruit extract.",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/36157770/",
+  "publication_types": [
+   "Journal Article"
+  ],
+  "_provenance": {
+   "source": "pubmed",
+   "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?tool=moleculab&db=pubmed&id=40403321%2C42449224%2C26874255%2C21372539%2C36157770%2C27489055%2C32483287&retmode=xml",
+   "retrieved_at": "2026-11-16T15:28:10+00:00"
+  }
+ },
+ {
+  "pmid": "27489055",
+  "title": "Metabolomic study of wild and cultivated caper (Capparis spinosa L.) from different areas of Sardinia and their comparative evaluation.",
+  "authors": [
+   "Maldini M",
+   "Foddai M",
+   "Natella F",
+   "Addis R",
+   "Chessa M",
+   "Petretto GL",
+   "Tuberoso CI",
+   "Pintore G"
+  ],
+  "year": 2016,
+  "journal": "Journal of mass spectrometry : JMS",
+  "doi": "10.1002/jms.3830",
+  "language": "eng",
+  "abstract": "Capparis spinosa L. (Capparidaceae), also known as caper, is widely known for its very aromatic flower buds (capers),that are largely employed as a flavouring in cooking. Capparis species are regarded as a potential source of important bioactive compounds, in fact, due to their botanical relationship with Brassica species; they contain glucosinolates, secondary plant metabolites, that have been studied for their potential anticarcinogenic properties. In addition, the presence of other numerous beneficial compounds such as polyphenols, alkaloids, lipids, vitamins and minerals have been reported. The aim of this study was to individuate and determinate the principal bioactive compounds occurring in different part (leaves, buds and flowers) of wild and cultivated C. spinosa collected from different area of Sardinia (Italy). Ultra-high performance liquid chromatography-triple quadrupole/linear ion trap tandem mass spectrometry methods were used for identification and simultaneous determination of 27 bioactive molecules. Analysis of different samples revealed qualitative and quantitative differences in the content of flavonoids, glucosinolates, anthocyanins and phenolic acids. In particular, glucocapparin resulted the most abundant with values ranging from 112 to 364 mg/100 g Fresh Weight (FW); followed by rutin with highest value of 126 mg/100 g FW, 4-hydroxyglucobrassicin with highest value of 42 mg/100 g FW and isorhamnetin 3-O-rutinoside with highest value of 24 mg/100 g FW. Based on this metabolomic targeted approach, quantitative results were treated by principal component analysis to explore and visualise correlation and discrimination among collections of C. spinosa samples. Copyright © 2016 John Wiley & Sons, Ltd.",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/27489055/",
+  "publication_types": [
+   "Journal Article"
+  ],
+  "_provenance": {
+   "source": "pubmed",
+   "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?tool=moleculab&db=pubmed&id=40403321%2C42449224%2C26874255%2C21372539%2C36157770%2C27489055%2C32483287&retmode=xml",
+   "retrieved_at": "2026-11-16T15:28:10+00:00"
+  }
+ },
+ {
+  "pmid": "32483287",
+  "title": "Identification and tissue-specific expression of rutin biosynthetic pathway genes in Capparis spinosa elicited with salicylic acid and methyl jasmonate.",
+  "authors": [
+   "Kianersi F",
+   "Abdollahi MR",
+   "Mirzaie-Asl A",
+   "Dastan D",
+   "Rasheed F"
+  ],
+  "year": 2020,
+  "journal": "Scientific reports",
+  "doi": "10.1038/s41598-020-65815-2",
+  "language": "eng",
+  "abstract": "Capparis spinosa is an edible medicinal plant which is considered as an excellent source of rutin. Rutin is a glycoside of the flavonoid quercetin that has been reported to have a beneficial role in controlling various diseases such as hypertension, arteriosclerosis, diabetes, and obesity. In this study, the partial cDNA of four genes involved in the rutin biosynthetic pathway including 4-coumaroyl CoA ligase (4CL), flavonoid 3'-hydroxylase (F3'H), flavonol synthase (FLS) and flavonol-3-O-glucoside L-rhamnosyltransferase (RT) were identified in C.spinosa plants for the first time. The protein sequences of these genes shared high similarity with the same proteins in other plant species. Subsequently, the expression patterns of these genes as well as rutin accumulation in C.spinosa leaves treated with different concentrations of salicylic acid (SA) and methyl jasmonate (MeJA) and also in different tissues of Caper plants treated with 100 mgL-1 SA and 150 μM MeJA were evaluated. The expression of all four genes was clearly up-regulated and rutin contents increased in response to MeJA and SA treatments after 24 h. The highest rutin contents (5.30 mgg-1 DW and 13.27 mgg-1 DW), as well as the highest expression levels of all four genes, were obtained using 100 mgL-1 SA and 150 μM MeJA, respectively. Among the different tissues, the highest rutin content was observed in young leaves treated with 150 μM MeJA, which corresponded to the expression of related genes, especially RT, as a key gene in the rutin biosynthetic pathway. These results suggest that rutin content in various tissues of C. spinosa can be enhanced to a significant extent by MeJA and SA treatments and the gene expression patterns of rutin-biosynthesis-related genes are regulated by these elicitors.",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/32483287/",
+  "publication_types": [
+   "Journal Article"
+  ],
+  "_provenance": {
+   "source": "pubmed",
+   "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?tool=moleculab&db=pubmed&id=40403321%2C42449224%2C26874255%2C21372539%2C36157770%2C27489055%2C32483287&retmode=xml",
+   "retrieved_at": "2026-11-16T15:28:10+00:00"
+  }
+ }
+]

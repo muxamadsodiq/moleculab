@@ -1,0 +1,849 @@
+/* ============================================================================
+   MOLECULAB design system — scientific workstation shell.
+
+   Loaded AFTER style.css: every legacy class keeps working (the 40 UI smoke
+   checks depend on them), while the tokens below are refined in place and the
+   new component layer is added.
+
+   The central idea is EPISTEMIC STATUS: what kind of knowledge a number is.
+   Experimental / derived / computed / predicted / hypothesis / unverified /
+   missing / contradicted each get a colour, an icon glyph and a word. Colour is
+   never the only signal.
+   ========================================================================= */
+
+:root {
+  /* ---- surfaces: deep graphite, four steps of elevation ---- */
+  --bg: #0a0c10;
+  --surface-0: #0d1015;
+  --surface-1: #12161d;
+  --surface-2: #171d26;
+  --surface-3: #1e2630;
+  --panel: var(--surface-1);
+  --panel-2: var(--surface-2);
+  --line: #242d39;
+  --line-strong: #32404f;
+
+  /* ---- text ---- */
+  --text: #e3e8ef;
+  --text-dim: #aab4c0;
+  --muted: #7d8795;
+  --text-faint: #5b6473;
+
+  /* ---- accents ---- */
+  --accent: #4db6a4;
+  --accent-2: #6f9fe0;
+  --accent-ink: #0a1614;
+
+  /* ---- epistemic status (also used by legacy evidence classes) ---- */
+  --experimental: #4db6a4;
+  --derived: #5fb3c9;
+  --computed: #b98ae0;
+  --predicted: #c27c6b;
+  --hypothesis: #d4a95a;
+  --unverified: #8a96a3;
+  --contradiction: #e0786a;
+  --missing: #6b7482;
+  --direct: var(--experimental);
+  --tentative: var(--hypothesis);
+  --secondary: var(--accent-2);
+  --traditional: #b48ead;
+  --computational: var(--computed);
+  --danger: var(--contradiction);
+
+  /* ---- type ---- */
+  --mono: ui-monospace, "SFMono-Regular", "JetBrains Mono", "Cascadia Mono", Menlo, monospace;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --fs-micro: 10.5px; --fs-xs: 11.5px; --fs-sm: 12.5px; --fs-base: 13.5px;
+  --fs-md: 15px; --fs-lg: 18px; --fs-xl: 22px; --fs-2xl: 27px;
+
+  /* ---- metrics ---- */
+  --r-sm: 5px; --r-md: 8px; --r-lg: 11px;
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px; --s-6: 32px;
+  --rail: 212px;
+  /* Measured header height. Used by the rail and by workstation pages so their
+     full-height calculations agree and the document never gains a few stray pixels. */
+  --head: 53px;
+  --shadow-1: 0 1px 2px rgba(0,0,0,.4);
+  --shadow-2: 0 6px 22px rgba(0,0,0,.42);
+}
+
+html, body { background: var(--bg); font-size: var(--fs-base); }
+body { -webkit-font-smoothing: antialiased; }
+
+/* Numbers must line up when scanned in a column. */
+.num, .kv dd, td.num, .stat, .measure { font-variant-numeric: tabular-nums; }
+
+/* ============================ application shell ========================== */
+
+/* minmax(0, 1fr), not 1fr: a bare 1fr track floors at its content's min-content width, so a wide
+   table or molecular panel pushes the whole shell past the viewport and creates horizontal scroll. */
+body.shell { display: grid; grid-template-columns: var(--rail) minmax(0, 1fr); min-height: 100vh; }
+body.shell > main { min-width: 0; overflow-x: hidden; }
+body.shell > header { grid-column: 1 / -1; }
+body.shell > main { padding: var(--s-5) var(--s-5) var(--s-6); max-width: none; }
+
+.rail {
+  background: var(--surface-0); border-right: 1px solid var(--line);
+  padding: var(--s-4) var(--s-2); display: flex; flex-direction: column; gap: 2px;
+  position: sticky; top: var(--head); align-self: start; height: calc(100vh - var(--head));
+  /* The rail is a <nav>, and style.css sets `nav { flex-wrap: wrap }`. In a fixed-height flex
+     column that makes overflowing items wrap into a SECOND COLUMN, which rendered the lower
+     nav groups on top of the workspace. The rail must scroll, never wrap. */
+  flex-wrap: nowrap;
+  overflow-y: auto; overflow-x: hidden;
+  scrollbar-width: thin;
+}
+.rail > * { flex: 0 0 auto; }
+.rail-group { font-size: var(--fs-micro); text-transform: uppercase; letter-spacing: .1em;
+  color: var(--text-faint); padding: var(--s-4) var(--s-3) var(--s-1); font-weight: 600; }
+.rail-group:first-child { padding-top: 0; }
+.rail a {
+  display: flex; align-items: center; gap: 9px; padding: 7px var(--s-3);
+  border-radius: var(--r-sm); color: var(--text-dim); font-size: var(--fs-base);
+  border-left: 2px solid transparent; transition: background .12s ease, color .12s ease;
+}
+.rail a:hover { background: var(--surface-1); color: var(--text); text-decoration: none; }
+.rail a.active { background: var(--surface-2); color: var(--text); border-left-color: var(--accent); }
+.rail a .ic { width: 15px; text-align: center; opacity: .85; flex: none; font-size: 13px; }
+.rail-foot { margin-top: auto; padding: var(--s-3); font-size: var(--fs-micro); color: var(--text-faint);
+  border-top: 1px solid var(--line); line-height: 1.5; }
+
+header { background: var(--surface-0); padding: 9px var(--s-4); border-bottom: 1px solid var(--line); }
+.brand { font-size: 13px; letter-spacing: .14em; }
+
+/* ============================== page header ============================== */
+
+.page-head { display: flex; align-items: flex-start; gap: var(--s-4); flex-wrap: wrap;
+  margin-bottom: var(--s-4); padding-bottom: var(--s-3); border-bottom: 1px solid var(--line); }
+.page-head h1 { font-size: var(--fs-xl); letter-spacing: -.012em; margin: 0 0 3px; }
+.page-head .lede { color: var(--muted); font-size: var(--fs-base); max-width: 76ch; margin: 0; }
+.page-head .actions { margin-left: auto; display: flex; gap: var(--s-2); flex-wrap: wrap; }
+.eyebrow { font-size: var(--fs-micro); text-transform: uppercase; letter-spacing: .13em;
+  color: var(--accent); font-weight: 600; margin-bottom: 3px; }
+
+/* ========================= epistemic status chips ======================== */
+
+.chip {
+  display: inline-flex; align-items: center; gap: 5px; font-size: var(--fs-xs);
+  padding: 2px 8px; border-radius: 11px; border: 1px solid currentColor;
+  white-space: nowrap; font-weight: 500; line-height: 1.5;
+}
+.chip .g { font-size: 10px; opacity: .95; }
+.chip-experimental { color: var(--experimental); background: rgba(77,182,164,.09); }
+.chip-derived      { color: var(--derived);      background: rgba(95,179,201,.09); }
+.chip-computed     { color: var(--computed);     background: rgba(185,138,224,.10); }
+.chip-predicted    { color: var(--predicted);    background: rgba(194,124,107,.10); }
+.chip-hypothesis   { color: var(--hypothesis);   background: rgba(212,169,90,.10); }
+.chip-unverified   { color: var(--unverified);   background: rgba(138,150,163,.10); }
+.chip-contradiction{ color: var(--contradiction);background: rgba(224,120,106,.11); }
+.chip-missing      { color: var(--missing);      background: rgba(107,116,130,.10);
+                     border-style: dashed; }
+
+/* ============================== panels =================================== */
+
+.panel { background: var(--surface-1); border: 1px solid var(--line); border-radius: var(--r-md);
+  display: flex; flex-direction: column; min-width: 0; }
+.panel > header, .panel-head {
+  display: flex; align-items: center; gap: var(--s-2); padding: 9px var(--s-3);
+  border-bottom: 1px solid var(--line); background: var(--surface-0);
+  border-radius: var(--r-md) var(--r-md) 0 0; position: static; flex-wrap: wrap;
+}
+.panel-title { font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: .1em;
+  color: var(--text-dim); font-weight: 600; }
+.panel-head .right { margin-left: auto; display: flex; gap: var(--s-1); align-items: center; }
+.panel-body { padding: var(--s-3); min-width: 0; }
+.panel-body.flush { padding: 0; }
+.panel.scroll .panel-body { overflow: auto; }
+
+.card { background: var(--surface-1); border-color: var(--line); border-radius: var(--r-md); }
+
+/* ============================ toolbar / controls ========================= */
+
+.toolbar { display: flex; gap: var(--s-1); align-items: center; flex-wrap: wrap; }
+.btn, .toolbar button, .seg button {
+  background: var(--surface-2); border: 1px solid var(--line); color: var(--text-dim);
+  border-radius: var(--r-sm); padding: 5px 11px; font-size: var(--fs-sm); cursor: pointer;
+  transition: border-color .12s ease, color .12s ease, background .12s ease;
+}
+.btn:hover, .toolbar button:hover, .seg button:hover { color: var(--text); border-color: var(--line-strong); }
+.btn.on, .seg button.active, .btn.primary {
+  color: var(--text); border-color: var(--accent); background: rgba(77,182,164,.13);
+}
+.btn.ghost { background: transparent; border-color: transparent; }
+.btn.ghost:hover { background: var(--surface-2); }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: var(--r-sm); overflow: hidden; }
+.seg button { border: none; border-right: 1px solid var(--line); border-radius: 0; }
+.seg button:last-child { border-right: none; }
+.field { display: flex; flex-direction: column; gap: 3px; }
+.field label { font-size: var(--fs-xs); color: var(--muted); }
+input[type="range"] { accent-color: var(--accent); }
+
+/* ============================== data tables ============================== */
+
+.dtable { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); }
+.dtable th {
+  text-align: left; font-weight: 600; font-size: var(--fs-micro); text-transform: uppercase;
+  letter-spacing: .08em; color: var(--text-faint); padding: 7px var(--s-3);
+  border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--surface-0); z-index: 1;
+}
+.dtable td { padding: 7px var(--s-3); border-bottom: 1px solid rgba(36,45,57,.55); vertical-align: top; }
+.dtable tbody tr:hover { background: rgba(30,38,48,.5); }
+.dtable td.num, .dtable th.num { text-align: right; font-family: var(--mono); font-size: var(--fs-xs); }
+.dtable tr.sel { background: rgba(77,182,164,.08); }
+
+/* measurement with its unit kept visually subordinate */
+.measure { font-family: var(--mono); }
+.measure .unit { color: var(--text-faint); font-size: .85em; margin-left: 2px; }
+
+/* ============================ states ===================================== */
+
+.skel { background: linear-gradient(90deg, var(--surface-2) 25%, var(--surface-3) 50%, var(--surface-2) 75%);
+  background-size: 200% 100%; animation: shimmer 1.3s linear infinite; border-radius: var(--r-sm); }
+@keyframes shimmer { to { background-position: -200% 0; } }
+.skel-row { height: 13px; margin-bottom: 9px; }
+
+.state { text-align: center; padding: var(--s-6) var(--s-4); color: var(--muted); }
+.state .g { font-size: 26px; opacity: .5; display: block; margin-bottom: var(--s-2); }
+.state h4 { margin: 0 0 var(--s-1); color: var(--text-dim); font-size: var(--fs-md); font-weight: 600; }
+.state p { margin: 0 auto var(--s-3); max-width: 52ch; font-size: var(--fs-sm); }
+.state.error { color: var(--contradiction); }
+.state.error h4 { color: var(--contradiction); }
+
+/* A scientific caveat. Deliberately plain, never dismissible. */
+.note {
+  font-size: var(--fs-sm); color: var(--text-dim); background: var(--surface-0);
+  border-left: 2px solid var(--line-strong); padding: 9px var(--s-3);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0; margin: var(--s-2) 0;
+}
+.note.caution { border-left-color: var(--hypothesis); color: var(--text-dim); }
+.note.caution strong { color: var(--hypothesis); }
+.note.unavailable { border-left-color: var(--missing); border-left-style: dashed; }
+.limit { font-size: var(--fs-sm); color: var(--text-dim); background: var(--surface-0);
+  border-left: 2px solid var(--hypothesis); padding: 9px var(--s-3);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0; margin: var(--s-2) 0; }
+
+ul.limits { margin: var(--s-2) 0; padding-left: 18px; font-size: var(--fs-sm); color: var(--muted); }
+ul.limits li { margin-bottom: 4px; }
+
+/* ============================ stat tiles ================================= */
+
+.tiles { display: grid; gap: var(--s-3); grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+.tile { background: var(--surface-1); border: 1px solid var(--line); border-radius: var(--r-md);
+  padding: var(--s-3) var(--s-4); }
+.tile .label { font-size: var(--fs-micro); text-transform: uppercase; letter-spacing: .09em;
+  color: var(--text-faint); font-weight: 600; }
+.tile .value { font-size: var(--fs-2xl); font-weight: 600; font-family: var(--mono);
+  font-variant-numeric: tabular-nums; line-height: 1.15; margin-top: 3px; letter-spacing: -.02em; }
+.tile .foot { font-size: var(--fs-xs); color: var(--muted); margin-top: 3px; }
+.tile a { color: inherit; }
+
+/* ============================ workstation grids ========================== */
+
+.ws { display: grid; gap: var(--s-3); align-items: start; }
+.ws-studio { grid-template-columns: 236px minmax(0, 1fr) 320px; }
+.ws-sim { grid-template-columns: 300px minmax(0, 1fr); }
+.ws-pane { position: sticky; top: 64px; max-height: calc(100vh - 80px); overflow: auto; }
+
+.viewport { position: relative; background: #080a0d; border: 1px solid var(--line);
+  border-radius: var(--r-md); overflow: hidden; min-height: 420px; }
+/* Definite height so a child's height:100% resolves; without it the canvas falls back to its own
+   min-height and leaves dead space inside the viewport frame. */
+.viewport.tall { height: 560px; min-height: 0; }
+.viewport .mol3d { height: 100%; min-height: 0; }
+.viewport canvas { border-radius: 0; }
+.viewport-overlay { position: absolute; left: var(--s-3); bottom: var(--s-3); z-index: 2;
+  display: flex; gap: var(--s-1); flex-wrap: wrap; pointer-events: none; }
+.viewport-overlay .chip { pointer-events: auto; background: rgba(10,12,16,.82); backdrop-filter: blur(3px); }
+.viewport-corner { position: absolute; right: var(--s-3); top: var(--s-3); z-index: 2;
+  display: flex; gap: var(--s-1); }
+.viewport:fullscreen, .viewport:-webkit-full-screen { min-height: 100vh; border-radius: 0; }
+
+.mol2d { background: #080a0d; border: 1px solid var(--line); border-radius: var(--r-md);
+  padding: var(--s-2); display: flex; align-items: center; justify-content: center; min-height: 260px; }
+.mol2d svg { max-width: 100%; height: auto; }
+.mol3d { width: 100%; height: 100%; min-height: 420px; position: relative; }
+
+/* list of selectable records (compounds, conformers, candidates) */
+.pick { display: block; width: 100%; text-align: left; background: transparent;
+  border: 1px solid transparent; border-left: 2px solid transparent; border-radius: var(--r-sm);
+  padding: 7px var(--s-3); margin-bottom: 2px; color: var(--text-dim); cursor: pointer; }
+.pick:hover { background: var(--surface-2); color: var(--text); border-color: var(--line); }
+.pick.active { background: var(--surface-2); color: var(--text); border-left-color: var(--accent); }
+.pick strong { display: block; font-size: var(--fs-base); font-weight: 600; }
+.pick .meta { font-size: var(--fs-xs); color: var(--muted); font-family: var(--mono); }
+
+/* ============================ simple charts ============================== */
+/* SVG bars/scatter rendered from real data; no chart library. */
+
+.chart { width: 100%; display: block; }
+.chart .cbar { fill: var(--accent); opacity: .78; }
+.chart .cbar:hover { opacity: 1; }
+.chart .axis { stroke: var(--line-strong); stroke-width: 1; }
+.chart .tick { fill: var(--text-faint); font-size: 9.5px; font-family: var(--mono); }
+.chart .dot { fill: var(--accent-2); opacity: .62; }
+.chart .dot.hi { fill: var(--accent); opacity: 1; }
+.chart-cap { font-size: var(--fs-xs); color: var(--muted); margin-top: var(--s-1); }
+
+/* energy ladder for the conformer explorer */
+.ladder { display: grid; grid-template-columns: 1fr; gap: 2px; }  /* one rung per row: an
+   ancestor grid was otherwise flowing the rungs into columns */
+.ladder .rung { display: grid; grid-template-columns: 34px 1fr 74px; gap: var(--s-2);
+  align-items: center; padding: 3px var(--s-2); border-radius: var(--r-sm); cursor: pointer;
+  border: 1px solid transparent; }
+.ladder .rung:hover { background: var(--surface-2); border-color: var(--line); }
+.ladder .rung.active { background: rgba(77,182,164,.10); border-color: var(--accent); }
+.ladder .rung .n { font-family: var(--mono); font-size: var(--fs-xs); color: var(--text-faint); }
+.ladder .rung .track { height: 7px; background: var(--surface-3); border-radius: 4px; overflow: hidden; }
+.ladder .rung .fill { height: 100%; background: var(--accent); opacity: .8; }
+.ladder .rung .e { font-family: var(--mono); font-size: var(--fs-xs); text-align: right;
+  font-variant-numeric: tabular-nums; }
+
+/* ============================ misc ======================================= */
+
+code, .mono { font-family: var(--mono); font-size: var(--fs-xs); }
+.smiles { font-family: var(--mono); font-size: var(--fs-xs); word-break: break-all;
+  background: var(--surface-0); border: 1px solid var(--line); border-radius: var(--r-sm);
+  padding: 5px 7px; display: block; color: var(--text-dim); }
+.kv { font-size: var(--fs-sm); gap: 4px var(--s-4); width: 100%; border-collapse: collapse; }
+/* th/td had zero horizontal padding, so a nowrap label ran straight into its value
+   ("MOLECULAR FORMULAC20H20O4"). The label column now reserves space and values wrap. */
+.kv th { text-align: left; font-weight: 400; color: var(--muted); white-space: nowrap;
+  padding: 2px var(--s-3) 2px 0; vertical-align: top; width: 1%; }
+.kv td { padding: 2px 0; word-break: break-word; overflow-wrap: anywhere; min-width: 0; }
+.kv td code, .kv td .mono { word-break: break-all; }
+details > summary { cursor: pointer; color: var(--accent-2); font-size: var(--fs-sm); padding: 3px 0; }
+.row { display: flex; gap: var(--s-2); align-items: center; flex-wrap: wrap; }
+.spread { display: flex; gap: var(--s-3); justify-content: space-between; align-items: baseline; }
+.muted { color: var(--muted); }
+.stack > * + * { margin-top: var(--s-3); }
+
+/* ============================ responsive ================================= */
+
+@media (max-width: 1280px) {
+  .ws-studio { grid-template-columns: 210px minmax(0, 1fr); }
+  .ws-studio > .ws-info { grid-column: 1 / -1; }
+}
+@media (max-width: 1000px) {
+  body.shell { grid-template-columns: 1fr; }
+  .rail {
+    position: static; height: auto; flex-direction: row; overflow-x: auto; gap: var(--s-1);
+    border-right: none; border-bottom: 1px solid var(--line); padding: var(--s-2);
+  }
+  .rail-group, .rail-foot { display: none; }
+  .rail a { border-left: none; border-bottom: 2px solid transparent; padding: 6px 10px; white-space: nowrap; }
+  .rail a.active { border-left-color: transparent; border-bottom-color: var(--accent); }
+  .ws-studio, .ws-sim { grid-template-columns: 1fr; }
+  .ws-pane { position: static; max-height: none; }
+  body.shell > main { padding: var(--s-4) var(--s-3) var(--s-5); }
+}
+@media (max-width: 680px) {
+  .page-head .actions { margin-left: 0; width: 100%; }
+  .tiles { grid-template-columns: repeat(auto-fit, minmax(132px, 1fr)); }
+  .tile .value { font-size: var(--fs-xl); }
+  .dtable { font-size: var(--fs-xs); }
+  .dtable th, .dtable td { padding: 6px var(--s-2); }
+  .viewport { min-height: 320px; }
+  .viewport.tall { height: 380px; }
+  .mol3d { min-height: 320px; }
+  header .searchbar { order: 3; max-width: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* Legacy studio grid: same min-content trap as the shell. */
+.studio-layout { grid-template-columns: 290px minmax(0, 1fr); }
+.studio-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+@media (max-width: 1000px) { .studio-layout { grid-template-columns: 1fr; } }
+
+/* ---------- research board ---------- */
+.boardcanvas { position: relative; min-height: 620px; background:
+  radial-gradient(circle, rgba(50,64,79,.28) 1px, transparent 1px) 0 0 / 22px 22px, var(--surface-0);
+  border: 1px solid var(--line); border-radius: var(--r-md); overflow: auto; }
+.bedges { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.bobj { position: absolute; background: var(--surface-1); border: 1px solid var(--line);
+  border-radius: var(--r-md); padding: 8px 10px; cursor: grab; box-shadow: var(--shadow-1);
+  user-select: none; }
+.bobj:hover { border-color: var(--line-strong); }
+.bobj.dragging { cursor: grabbing; box-shadow: var(--shadow-2); border-color: var(--accent); z-index: 3; }
+.bobj.picked { border-color: var(--accent); outline: 1px solid var(--accent); }
+.bobj-head { display: flex; align-items: center; gap: 6px; margin-bottom: 5px; }
+.bobj-head .bdel { margin-left: auto; padding: 0 6px; line-height: 1.3; }
+.bobj-title { font-weight: 600; font-size: var(--fs-base); }
+.bobj-body { font-size: var(--fs-sm); color: var(--text-dim); margin-top: 4px; white-space: pre-wrap; }
+.bobj-link { font-size: var(--fs-xs); display: inline-block; margin-top: 6px; }
+@media (max-width: 680px) { .boardcanvas { min-height: 440px; } }
+
+/* Containment: a wide child (periodic table, wide data table) must scroll inside its panel
+   rather than pushing the whole page sideways. */
+.panel, .panel-body, .card { min-width: 0; }
+.panel-body { overflow-x: auto; }
+
+/* ============================ workstation layout =========================
+   A workstation page fills the viewport below the header and gives each region
+   EXACTLY ONE scroll context. The previous .ws/.ws-pane pattern nested a sticky
+   scrolling pane inside a scrolling page inside a scrolling list, which stacked
+   three scrollbars against each other and squeezed the working area.
+   ======================================================================== */
+
+body.shell > main.workstation {
+  height: calc(100vh - var(--head));
+  padding: 0;
+  overflow: hidden;              /* the page itself never scrolls; regions do */
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.wx-head {
+  display: flex; align-items: center; gap: var(--s-3); flex-wrap: wrap;
+  padding: 10px var(--s-4); border-bottom: 1px solid var(--line);
+  background: var(--surface-0); flex: 0 0 auto;
+}
+.wx-head h1 { font-size: var(--fs-md); margin: 0; letter-spacing: -.01em; }
+.wx-head .eyebrow { margin: 0 0 1px; }
+.wx-head .wx-sub { color: var(--muted); font-size: var(--fs-sm); max-width: 62ch; }
+.wx-head .right { margin-left: auto; display: flex; gap: var(--s-2); align-items: center; flex-wrap: wrap; }
+
+/* Horizontal tool strip scrolls sideways on its own, never the document. */
+.wx-strip { display: flex; gap: var(--s-1); overflow-x: auto; overflow-y: hidden;
+  flex: 0 0 auto; padding: 6px var(--s-4); border-bottom: 1px solid var(--line);
+  background: var(--surface-0); scrollbar-width: thin; }
+.wx-strip button { white-space: nowrap; }
+
+.wx-body { flex: 1 1 auto; min-height: 0; display: grid; gap: 0; }
+.wx-3 { grid-template-columns: 272px minmax(0, 1fr) 320px; }
+.wx-2 { grid-template-columns: 300px minmax(0, 1fr); }
+
+/* One scroll context per column. */
+.wx-col { min-width: 0; min-height: 0; overflow-y: auto; overflow-x: hidden;
+  padding: var(--s-3); scrollbar-width: thin; }
+.wx-col + .wx-col { border-left: 1px solid var(--line); }
+.wx-col > * + * { margin-top: var(--s-3); }
+
+/* The centre is the working area: it does not scroll, it fills. */
+.wx-main { min-width: 0; min-height: 0; display: flex; flex-direction: column;
+  padding: var(--s-3); gap: var(--s-3); overflow: hidden; }
+.wx-main.scrolls { overflow-y: auto; scrollbar-width: thin; }
+.wx-stage { flex: 1 1 auto; min-height: 0; position: relative;
+  background: #080a0d; border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden; }
+.wx-stage > .mol3d, .wx-stage > canvas { width: 100%; height: 100%; min-height: 0; }
+.wx-under { flex: 0 0 auto; max-height: 38%; overflow-y: auto; scrollbar-width: thin; }
+
+/* Sections inside a tool column: flat, no nested card borders. */
+.wx-sec { border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface-1); }
+.wx-sec > h4 { margin: 0; padding: 8px var(--s-3); font-size: var(--fs-xs);
+  text-transform: uppercase; letter-spacing: .09em; color: var(--text-dim);
+  border-bottom: 1px solid var(--line); font-weight: 600; }
+.wx-sec > .in { padding: var(--s-3); }
+.wx-sec > .in > * + * { margin-top: var(--s-2); }
+/* A picker list scrolls itself, but only one level deep. */
+.wx-list { max-height: 260px; overflow-y: auto; scrollbar-width: thin; margin: 0; }
+
+@media (max-width: 1180px) {
+  .wx-3 { grid-template-columns: 250px minmax(0, 1fr); }
+  .wx-3 > .wx-col:last-child { display: none; }
+  .wx-3.show-inspector { grid-template-columns: minmax(0,1fr) 300px; }
+  .wx-3.show-inspector > .wx-col:first-child { display: none; }
+  .wx-3.show-inspector > .wx-col:last-child { display: block; }
+}
+@media (max-width: 860px) {
+  body.shell > main.workstation { height: auto; overflow: visible; }
+  .wx-body { display: block; }
+  .wx-col, .wx-main { overflow: visible; height: auto; }
+  .wx-col + .wx-col { border-left: none; border-top: 1px solid var(--line); }
+  .wx-stage { height: 340px; }
+}
+
+/* ===================================================================
+   Research Bench and Molecular Playground
+   Added with the product refocus: one front door instead of 23.
+   Every colour comes from the existing tokens so the Bench cannot
+   drift away from the rest of the application.
+   =================================================================== */
+
+/* The Bench is the primary destination, so its rail entry is weighted. */
+.rail a.primary-nav { color: var(--text); font-weight: 600; }
+.rail a.primary-nav .ic { color: var(--accent); }
+
+.wx-acts { display: flex; gap: var(--s-2); align-items: center; }
+
+/* ---- stage strip: the seven stages, with real completion marks ---- */
+.wx-tab {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--surface-2); color: var(--text-dim);
+  border: 1px solid var(--line); border-radius: var(--r-sm);
+  padding: 6px 11px; font-size: var(--fs-sm); cursor: pointer;
+}
+.wx-tab:hover { background: var(--surface-3); color: var(--text); }
+.wx-tab.on {
+  background: var(--surface-3); color: var(--text);
+  border-color: var(--accent); box-shadow: inset 0 -2px 0 var(--accent);
+}
+.wx-tab .tick { color: var(--experimental); font-size: var(--fs-xs); }
+.wx-tab .dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--line-strong); display: inline-block;
+}
+
+/* ---- opening screen ---- */
+.bench-start { max-width: 820px; }
+.lede {
+  font-size: var(--fs-md); color: var(--text-dim);
+  line-height: 1.55; margin: 0 0 var(--s-4);
+}
+.stage-head { margin-bottom: var(--s-4); }
+.stage-head h2 { font-size: var(--fs-lg); margin: 0 0 2px; }
+
+.chips { display: flex; flex-wrap: wrap; gap: var(--s-2); margin-top: var(--s-2); }
+.chipb {
+  background: var(--surface-2); color: var(--text-dim);
+  border: 1px solid var(--line); border-radius: var(--r-sm);
+  padding: 5px 10px; font-size: var(--fs-xs); cursor: pointer; text-align: left;
+}
+.chipb:hover { background: var(--surface-3); color: var(--text); border-color: var(--accent); }
+.pgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(84px, 1fr)); gap: 5px; }
+
+.modes { display: grid; gap: var(--s-2); }
+.mode {
+  display: flex; align-items: flex-start; gap: var(--s-2);
+  background: var(--surface-2); border: 1px solid var(--line);
+  border-radius: var(--r-sm); padding: 9px 11px; cursor: pointer;
+}
+.mode:hover { border-color: var(--line-strong); }
+.mode input { margin-top: 3px; flex: 0 0 auto; }
+.mode span { display: flex; flex-direction: column; min-width: 0; }
+.mode strong { font-size: var(--fs-sm); font-weight: 600; }
+.mode em {
+  font-style: normal; font-size: var(--fs-micro);
+  color: var(--muted); margin-top: 1px;
+}
+.btn.big { padding: 10px 18px; font-size: var(--fs-base); margin-top: var(--s-3); }
+
+.steps { margin: 0; padding-left: 20px; color: var(--text-dim); font-size: var(--fs-sm); }
+.steps li { margin-bottom: 3px; }
+
+/* ---- search hits ---- */
+.hits { display: grid; gap: 5px; }
+.hit {
+  display: flex; align-items: center; gap: var(--s-2);
+  background: var(--surface-2); border: 1px solid var(--line);
+  border-radius: var(--r-sm); padding: 7px 10px; font-size: var(--fs-sm);
+}
+.hit .k {
+  flex: 0 0 auto; font-size: var(--fs-micro); text-transform: uppercase;
+  letter-spacing: .04em; color: var(--muted); min-width: 76px;
+}
+.hit strong { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis;
+  white-space: nowrap; }
+.hit .meta { flex: 0 1 auto; color: var(--muted); font-size: var(--fs-xs);
+  max-width: 34%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* ---- recorded items, results, disclosure ---- */
+.rec {
+  background: var(--surface-2); border: 1px solid var(--line);
+  border-left: 2px solid var(--line-strong);
+  border-radius: var(--r-sm); padding: 9px 11px; margin-bottom: var(--s-2);
+}
+.rec p { margin: 5px 0; font-size: var(--fs-sm); }
+.unavail {
+  border-left: 2px solid var(--missing, var(--muted));
+  background: var(--surface-2); border-radius: var(--r-sm);
+  padding: 9px 11px; margin-bottom: var(--s-2);
+}
+.unavail p { margin: 5px 0; font-size: var(--fs-sm); color: var(--text-dim); }
+.res {
+  background: var(--surface-0); border: 1px solid var(--line);
+  border-radius: var(--r-sm); padding: var(--s-3);
+  font-size: var(--fs-xs); line-height: 1.5;
+  max-height: 340px; overflow: auto; white-space: pre-wrap; word-break: break-word;
+}
+.det { margin-top: var(--s-3); }
+.det > summary {
+  cursor: pointer; font-size: var(--fs-sm); color: var(--text-dim);
+  padding: 5px 0; user-select: none;
+}
+.det > summary:hover { color: var(--text); }
+.det h5 { font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: .05em;
+  color: var(--muted); margin: var(--s-3) 0 var(--s-1); }
+tr.diff > td { background: rgba(111, 159, 224, 0.07); }
+
+.svgbox {
+  background: var(--surface-0); border: 1px solid var(--line);
+  border-radius: var(--r-sm); padding: var(--s-2);
+  flex: 0 0 auto; max-width: 290px;
+}
+.svgbox svg { display: block; max-width: 100%; height: auto; }
+.viewer3d {
+  width: 300px; height: 240px; flex: 0 0 auto; position: relative;
+  background: var(--surface-0); border: 1px solid var(--line); border-radius: var(--r-sm);
+}
+.row.gap { gap: var(--s-3); align-items: flex-start; flex-wrap: wrap; }
+.mono.wrap { word-break: break-all; white-space: normal; }
+
+/* ---- playground ---- */
+.pg-bar {
+  display: flex; align-items: center; gap: var(--s-2);
+  padding-bottom: var(--s-2); flex-wrap: wrap;
+}
+.pg-status {
+  font-size: var(--fs-xs); color: var(--muted);
+  margin-left: auto; text-align: right; min-width: 0;
+}
+.pg-status.ok { color: var(--experimental); }
+.pg-status.warn { color: var(--hypothesis); }
+.pg-status.bad { color: var(--predicted); }
+/* JSME draws into its own container and needs real pixel space, not a percentage of nothing. */
+.pg-canvas { width: 100%; height: 100%; min-height: 430px; background: #fff;
+  border-radius: var(--r-sm); overflow: hidden; }
+
+@media (max-width: 900px) {
+  .viewer3d { width: 100%; }
+  .svgbox { max-width: 100%; }
+  .hit { flex-wrap: wrap; }
+  .hit .meta { max-width: 100%; }
+  .pg-canvas { min-height: 340px; }
+}
+
+/* ---- Molecular Playground: split 2D/3D stage ------------------------- */
+
+/* Segmented control, used for the view switch and the 3D style switch. */
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: var(--r-sm);
+  overflow: hidden; flex: 0 0 auto; }
+.seg > button {
+  background: var(--surface-2); color: var(--text-dim); border: 0;
+  border-right: 1px solid var(--line); padding: 5px 11px;
+  font-size: var(--fs-xs); cursor: pointer; font-family: inherit;
+}
+.seg > button:last-child { border-right: 0; }
+.seg > button:hover { background: var(--surface-3); color: var(--text); }
+.seg > button.on { background: var(--accent); color: var(--accent-ink); font-weight: 600; }
+.btn.sm { padding: 4px 9px; font-size: var(--fs-xs); }
+.btn.sm.on { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+
+/* The stage fills the remaining height and never scrolls the page. */
+.pg-split {
+  display: grid; gap: var(--s-2); min-height: 0; flex: 1 1 auto;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.pg-split.view-build { grid-template-columns: minmax(0, 1fr); }
+.pg-split.view-build #pgPane3d { display: none; }
+.pg-split.view-three { grid-template-columns: minmax(0, 1fr); }
+.pg-split.view-three #pgPane2d { display: none; }
+
+.pg-pane {
+  display: flex; flex-direction: column; min-width: 0; min-height: 0;
+  background: var(--surface-1); border: 1px solid var(--line); border-radius: var(--r-md);
+  overflow: hidden;
+}
+.pg-pane-h {
+  display: flex; align-items: center; gap: var(--s-2); flex-wrap: wrap;
+  padding: 7px var(--s-3); border-bottom: 1px solid var(--line);
+  background: var(--surface-2); font-size: var(--fs-sm); font-weight: 600;
+  flex: 0 0 auto;
+}
+.pg-pane-h .sub { font-weight: 400; font-size: var(--fs-micro); margin: 0; }
+
+/* JSME renders its own light-background canvas; give it real space. */
+.pg-canvas { flex: 1 1 auto; min-height: 380px; background: #fff; }
+.pg-fallback { padding: var(--s-4); font-size: var(--fs-sm); color: var(--text-dim); }
+
+.pg-3d-wrap { position: relative; flex: 1 1 auto; min-height: 380px; }
+.pg-3d { position: absolute; inset: 0; }
+.pg-3d-empty {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: var(--s-4); font-size: var(--fs-sm); color: var(--muted);
+  background: var(--surface-0); pointer-events: none;
+}
+.pg-3d-bar {
+  display: flex; align-items: center; gap: 5px; flex-wrap: wrap;
+  padding: 6px var(--s-3); border-top: 1px solid var(--line);
+  background: var(--surface-2); flex: 0 0 auto; min-height: 34px;
+}
+.pg-conf { display: inline-flex; align-items: center; gap: 4px; font-size: var(--fs-xs);
+  color: var(--text-dim); }
+.pg-energy { margin-left: auto; font-size: var(--fs-micro); color: var(--muted);
+  font-variant-numeric: tabular-nums; }
+
+/* The Playground's main column is a flex column so the stage can fill it. An explicit class
+   rather than :has(), so the layout does not depend on selector support. */
+.workstation .wx-main.pg-main { display: flex; flex-direction: column; min-height: 0; }
+
+@media (max-width: 1100px) {
+  .pg-split { grid-template-columns: minmax(0, 1fr); }
+  .pg-canvas, .pg-3d-wrap { min-height: 320px; }
+}
+
+/* ---- Explore stage: the investigation's own structures ---------------- */
+.matgrid { display: grid; gap: var(--s-2);
+  grid-template-columns: repeat(auto-fill, minmax(146px, 1fr)); }
+.matcard {
+  background: var(--surface-2); border: 1px solid var(--line);
+  border-radius: var(--r-md); padding: var(--s-2); cursor: pointer;
+  display: flex; flex-direction: column; gap: 3px; min-width: 0;
+}
+.matcard:hover { border-color: var(--accent); background: var(--surface-3); }
+.matcard strong { font-size: var(--fs-sm); overflow: hidden; text-overflow: ellipsis;
+  white-space: nowrap; }
+.matcard .meta { font-size: var(--fs-micro); color: var(--muted);
+  text-transform: uppercase; letter-spacing: .04em; }
+.matdep {
+  background: var(--surface-0); border-radius: var(--r-sm);
+  height: 110px; display: flex; align-items: center; justify-content: center;
+  overflow: hidden; padding: 4px;
+}
+.matdep svg { max-width: 100%; max-height: 100%; height: auto; }
+.matdep-none { font-size: var(--fs-micro); color: var(--text-faint); text-align: center; }
+
+/* ---- rendered calculation results and report markdown ---------------- */
+.dtable.vals th {
+  width: 46%; font-weight: 600; color: var(--text); text-align: left;
+  vertical-align: top; padding: 6px var(--s-3) 6px 0;
+}
+.dtable.vals th .hint {
+  display: block; font-weight: 400; font-size: var(--fs-micro);
+  color: var(--muted); margin-top: 1px; line-height: 1.35;
+}
+.dtable.vals td { vertical-align: top; }
+.dtable.vals .num { font-variant-numeric: tabular-nums; }
+
+.mdbody { font-size: var(--fs-sm); line-height: 1.6; color: var(--text-dim); }
+.mdbody h2, .mdbody h3, .mdbody h4, .mdbody h5, .mdbody h6 {
+  color: var(--text); margin: var(--s-4) 0 var(--s-2); line-height: 1.3;
+}
+.mdbody h2 { font-size: var(--fs-lg); border-bottom: 1px solid var(--line); padding-bottom: 5px; }
+.mdbody h3 { font-size: var(--fs-md); }
+.mdbody h4, .mdbody h5, .mdbody h6 { font-size: var(--fs-base); }
+.mdbody p { margin: 0 0 var(--s-2); }
+.mdbody ul { margin: 0 0 var(--s-2); padding-left: 20px; }
+.mdbody li { margin-bottom: 3px; }
+.mdbody code {
+  background: var(--surface-0); border: 1px solid var(--line); border-radius: 3px;
+  padding: 1px 4px; font-size: var(--fs-xs);
+}
+.mdbody blockquote {
+  margin: 0 0 var(--s-2); padding: 6px var(--s-3);
+  border-left: 2px solid var(--accent); background: var(--surface-2);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+}
+.mdbody hr { border: 0; border-top: 1px solid var(--line); margin: var(--s-4) 0; }
+.mdbody table { margin-bottom: var(--s-3); }
+.mdbody a { color: var(--accent-2); }
+
+/* =====================================================================
+   Landing page
+   ===================================================================== */
+.lp { max-width: 1060px; margin: 0 auto; padding-bottom: var(--s-6); }
+
+.lp-hero { padding: var(--s-6) 0 var(--s-5); border-bottom: 1px solid var(--line); }
+.lp-mark {
+  font-size: var(--fs-sm); font-weight: 700; letter-spacing: .22em;
+  color: var(--text-dim); margin-bottom: var(--s-4);
+}
+.lp-mark span { color: var(--accent); }
+.lp-hero h1 {
+  font-size: clamp(28px, 4.6vw, 46px); line-height: 1.12; margin: 0 0 var(--s-3);
+  letter-spacing: -0.02em; max-width: 18ch;
+}
+.lp-lede {
+  font-size: var(--fs-md); line-height: 1.6; color: var(--text-dim);
+  max-width: 64ch; margin: 0 0 var(--s-5);
+}
+.lp-cta { display: flex; gap: var(--s-3); flex-wrap: wrap; margin-bottom: var(--s-5); }
+
+.lp-stats {
+  display: grid; gap: var(--s-3); margin-top: var(--s-5);
+  grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+}
+.lp-stat {
+  background: var(--surface-1); border: 1px solid var(--line);
+  border-radius: var(--r-md); padding: var(--s-3);
+  display: flex; flex-direction: column; gap: 2px;
+}
+.lp-stat strong {
+  font-size: var(--fs-xl); line-height: 1; color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+.lp-stat span { font-size: var(--fs-xs); color: var(--muted); }
+
+.lp-sec { padding: var(--s-6) 0; border-bottom: 1px solid var(--line); }
+.lp-sec:last-child { border-bottom: 0; }
+.lp-sec h2 { font-size: var(--fs-xl); margin: 0 0 var(--s-3); letter-spacing: -0.01em; }
+.lp-body {
+  font-size: var(--fs-base); line-height: 1.65; color: var(--text-dim);
+  max-width: 70ch; margin: 0 0 var(--s-3);
+}
+.lp-accent { border-left: 2px solid var(--accent); padding-left: var(--s-5); }
+
+.lp-grid {
+  display: grid; gap: var(--s-3); margin-top: var(--s-4);
+  grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+}
+.lp-card {
+  background: var(--surface-1); border: 1px solid var(--line);
+  border-radius: var(--r-md); padding: var(--s-4);
+}
+.lp-card h3 { font-size: var(--fs-base); margin: var(--s-2) 0 var(--s-2); }
+.lp-card p { font-size: var(--fs-sm); line-height: 1.6; color: var(--text-dim); margin: 0; }
+
+.lp-close { text-align: left; }
+.lp-foot {
+  font-size: var(--fs-xs); color: var(--muted); line-height: 1.6;
+  max-width: 76ch; margin-top: var(--s-4);
+}
+
+@media (max-width: 720px) {
+  .lp-accent { padding-left: var(--s-3); }
+  .lp-hero { padding-top: var(--s-5); }
+  .lp-cta .btn { width: 100%; text-align: center; }
+}
+
+/* ---- Dosing Lab chart ------------------------------------------------ */
+.dose-chart { width: 100%; }
+.dchart { width: 100%; height: auto; display: block; }
+.dchart .dgrid { stroke: var(--line); stroke-width: 1; }
+.dchart .daxis { stroke: var(--line-strong); stroke-width: 1; }
+.dchart .dline { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.dchart .ddose { stroke: var(--line-strong); stroke-width: 1; stroke-dasharray: 2 4; opacity: .55; }
+.dchart .dlab { fill: var(--muted); font-size: 10px; font-family: inherit; }
+.dlegend { display: flex; gap: var(--s-3); flex-wrap: wrap; margin-top: 6px;
+  font-size: var(--fs-xs); color: var(--text-dim); }
+.dlegend span { display: inline-flex; align-items: center; gap: 5px; }
+.dlegend i { width: 11px; height: 3px; border-radius: 2px; display: inline-block; }
+
+
+/* ---- whole-body distribution ---------------------------------------- */
+.an-stage { display: grid; grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+  gap: var(--s-4); flex: 1 1 auto; min-height: 0; }
+.an-figure { background: var(--surface-0); border: 1px solid var(--line);
+  border-radius: var(--r-md); padding: var(--s-3); display: flex;
+  align-items: center; justify-content: center; min-height: 0; }
+.anbody { width: 100%; height: 100%; max-height: 520px; }
+.anorgan { stroke: var(--line-strong); stroke-width: 1; cursor: pointer;
+  transition: fill .12s linear; }
+.anorgan:hover { stroke: var(--accent); stroke-width: 1.6; }
+.an-side { min-width: 0; overflow-y: auto; }
+.an-time { padding-top: var(--s-3); flex: 0 0 auto; }
+.an-legend { margin-bottom: var(--s-3); }
+.an-legend .lab { font-size: var(--fs-micro); text-transform: uppercase;
+  letter-spacing: .05em; color: var(--muted); }
+.an-ramp { height: 10px; border-radius: 5px; margin: 4px 0 2px;
+  background: linear-gradient(90deg, rgb(23,30,38), rgb(212,170,58)); }
+.an-ends { display: flex; justify-content: space-between; font-size: var(--fs-micro);
+  color: var(--muted); }
+.an-row { cursor: pointer; }
+.an-row:hover > td { background: var(--surface-2); }
+
+@media (max-width: 1000px) {
+  .an-stage { grid-template-columns: minmax(0, 1fr); }
+  .anbody { max-height: 360px; }
+}
+
+.anoutline { fill: var(--surface-1); stroke: var(--line-strong); stroke-width: 1.2; }
+.an-caption { font-size: var(--fs-micro); color: var(--muted); line-height: 1.5;
+  margin: var(--s-2) 0 0; max-width: 46ch; }
+.an-figure { flex-direction: column; }
+
+.an3d { position: relative; width: 100%; height: 440px; border-radius: var(--r-sm);
+  background: var(--surface-0); }
+@media (max-width: 1000px) { .an3d { height: 340px; } }

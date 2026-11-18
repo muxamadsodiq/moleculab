@@ -1,0 +1,4 @@
+# PostgreSQL driver (when DATABASE_URL points at Postgres)
+psycopg[binary]>=3.2
+# Claude provider for the research assistant (LLM_PROVIDER=anthropic)
+anthropic>=1.0

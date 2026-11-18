@@ -1,0 +1,18 @@
+# Laptop PostgreSQL for MOLECULAB. Start: docker compose up -d
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: moleculab
+      POSTGRES_PASSWORD: moleculab
+      POSTGRES_DB: moleculab
+    ports:
+      - "5432:5432"
+    volumes:
+      - moleculab_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U moleculab"]
+      interval: 5s
+      retries: 10
+volumes:
+  moleculab_pg:
