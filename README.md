@@ -1,203 +1,85 @@
 # MOLECULAB
 
-**An evidence-grounded research environment for early-stage drug discovery and pharmaceutical
-formulation.**
+**An evidence-grounded research workbench for early-stage drug discovery and pharmaceutical formulation.**
 
-A researcher investigating a single compound today moves between a structure database, a
-literature index, an activity database, a clinical-trials registry and a spreadsheet. None of them
-talk to each other, so most of the day goes on copying between tabs and trying not to lose track
-of where each fact came from.
+Investigate a disease, target, compound or formulation in one workspace. MOLECULAB connects source records to molecular structures, reproducible calculations, candidate comparisons and experiment plans. It keeps the evidence behind each decision available in the same investigation.
 
-MOLECULAB puts that work on one bench, keeps every value attached to its source — and refuses to
-answer when the evidence cannot support an answer.
+Built for the Uzbekistan National AI Hackathon, with a demonstration corpus focused on Central Asian natural products. [Download the hackathon presentation](presentation/MOLECULAB_FINAL.pptx).
 
----
+## Try the demo
 
-## What makes it different
+Start the app and open **[Guided Demo](http://127.0.0.1:8765/#/demo)**. Follow rheumatoid arthritis to JAK1, inspect measured activity and a compound in 2D and 3D, then review the evidence and open a worked tablet formulation to see which experiment could resolve a missing measurement. The tour calls the application’s APIs. Live lookups require internet access.
 
-Most research tools show you a number and let you assume it was measured. MOLECULAB never confuses
-a computation with a measurement, and it says "I don't know" rather than guessing.
+For a local walkthrough, open **[Research Bench](http://127.0.0.1:8765/#/bench)** and choose an example objective. Use the bundled records and calculation tools, then open **[Body Distribution](http://127.0.0.1:8765/#/anatomy)** to run the human example and inspect how simulated concentrations change over time.
 
-**Every value carries its epistemic status.** `experimental` · `derived` · `computed` ·
-`predicted` · `hypothesis` · `unverified` · `contradiction` · `missing` — each with a colour, a
-glyph *and* a word, so the distinction survives greyscale and a screenshot. A computed descriptor
-cannot satisfy a physical formulation constraint. Missing data is shown as missing, never as zero
-and never silently estimated.
+## What’s in the workbench
 
-**The AI can only lose a claim, never promote one.** Its draft is split into atomic claims and
-each is checked against the record it cites. Claims the record does not support are *deleted*, not
-softened. Ask the assistant something the indexed evidence cannot answer and it abstains, naming
-what the records do and do not contain.
+| Area | What you can do |
+| --- | --- |
+| Research Bench, Workbench and Boards | Start with a plain-language objective and work through Research, Evidence, Assist, Explore, Calculate, Compare, Record and Report. Save investigations, attach source records, track hypotheses and notes, connect findings on a board, and export reports as Markdown. |
+| Discovery and evidence | Explore diseases, targets, compounds, plants, publications and evidence. Follow relationships in the knowledge graph, inspect evidence gaps and trace findings to the source record. |
+| Drug Intelligence and Elements | Look up and compare active ingredients, marketed products and source-backed label or registry information where available. Browse all 118 elements in the periodic table. |
+| AI Research Copilot | Ask literature and structure questions in context. Retrieve records and use extractive answers with the default provider setting. Optionally enable Claude generation with server-side claim verification and abstention when the retrieved evidence is insufficient. |
+| Molecular Studio and Playground | Open an indexed compound, paste SMILES or draw a structure with JSME. RDKit validates and standardizes structures while retaining the original input and stereochemistry. View 2D depictions, generate and inspect 3D conformers, and compare descriptors, fingerprints and scaffolds. |
+| Virtual Screening and Drug Repurposing | Rank candidates using measured activity for the selected target and compatible assays. Trace the supporting records, check replicates and disagreement, and review evidence for a repurposing hypothesis. |
+| Simulation Lab | Explore conformer ensembles, molecular properties and similarity, single-molecule dynamics and an implicit-solvent comparison. Inspect contacts in experimental protein–ligand structures from RCSB PDB. The catalogue has 16 calculations, each with its inputs, method, limitations and a SHA-256 fingerprint of calculation ID, inputs and software versions. |
+| Dosing Lab | Model single or repeat administration with configurable schedules and supplied PK parameters. Play concentration curves, inspect Cmax, Tmax, AUC, half-life and accumulation, compare scenarios across species, and explore a 3D surface of modeled exposure across dose levels. |
+| Body Distribution | Run whole-body PBPK for human, rat, mouse, rabbit or dog. Scrub through tissue concentrations, select organs for individual curves, and check the solver's reported mass balance. The rotatable BodyParts3D mesh is available for humans. Rat, mouse, rabbit and dog use schematic views with their own reference physiology. |
+| Formulation Studio, Materials and Conditions | Build and compare formulations, record ingredients and processing conditions, evaluate measurements against constraints, inspect compatibility and trade-offs, and prioritize experiments that address evidence gaps. Browse and compare the underlying materials and process records. |
 
-**It refuses, with the reason on screen.** Three capabilities are deliberately unavailable:
+## Evidence and model scope
 
-| Capability | Why it returns nothing |
-|---|---|
-| **Molecular docking** | No docking engine, no prepared receptors, no binding sites. A docking score is the easiest plausible-looking number to fabricate and one of the hardest to challenge. |
-| **QSAR / activity prediction** | Gated on evidence. In the curated JAK1 dataset (ChEMBL_37, 7,777 compounds) **6,774 have a single unreplicated measurement**, and of the 1,003 measured more than once, **263 (26%) disagree with themselves by tenfold or more**. No honest model ships on that noise floor. |
-| **Dissolution / bioavailability prediction** | No validated model, and no measured dissolution profiles to validate one against. |
+- The eight integrated source providers are **ChEMBL, Open Targets, PubChem, PubMed, Crossref, GBIF, ClinicalTrials.gov and DailyMed**. Provider responses carry their retrieval metadata and release identifiers where available. The structural contact viewer also reads deposited RCSB PDB structures.
+- Results use explicit evidence states including `experimental`, `derived`, `computed`, `predicted`, `hypothesis`, `unverified`, `contradiction` and `missing`. Missing values stay empty. Activity comparisons preserve endpoint and assay context, and censored measurements keep their inequality markers. Physical formulation constraints require supporting measurements.
+- With generation enabled, the assistant splits the draft into claims and checks each against its cited evidence. The answer omits unsupported claims and can abstain when the records are insufficient.
+- The 16 calculations cover descriptors, Lipinski criteria, structure validation, conformer ensembles, pairwise similarity, Murcko scaffolds, measured activity distributions, assay comparability, composition totals, concentration unit conversion, molecular dynamics, implicit solvent, experimental contacts, pharmacokinetics, dilution and PBPK.
+- Dynamics uses short single-molecule force-field trajectories. The solvent tool uses a simplified implicit model. Dilution calculates concentration after adding solvent. The Dosing Lab and PBPK use supplied parameters and reference physiology to estimate exposure. Those results support research and require experimental validation before any clinical interpretation.
+- The model catalogue marks molecular docking, QSAR activity prediction and dissolution or bioavailability prediction as unavailable. Candidate ranking uses measured evidence. The Uzbekistan medicine registry can be consulted through its official manual lookup.
 
-Where docking would normally go, MOLECULAB shows something stronger: **real experimental
-protein–ligand structures** from the RCSB PDB, with the contacts actually observed in the crystal.
-For `1M17` (EGFR + erlotinib) it measures the Met769 hinge hydrogen bond at **2.70 Å** — a result
-you can check against the literature, which a docking score never is.
+## Run locally
 
----
+Use **Python 3.14**. The browser UI uses vanilla JavaScript with no build step. **Node.js 24** is used for the frontend smoke test.
 
-## What it does
-
-### Research Bench — the front door
-One workspace, seven stages in plain words:
-`Research → Evidence → Assist → Explore → Calculate → Compare → Record → Report`.
-You describe a goal in your own words; a stage is marked complete only when something real is in
-it. A session *is* a research workspace, so notes, hypotheses, attached records and reports all
-hang off it.
-
-### Molecular Playground — build in 2D, explore in 3D
-Place atoms, drag atom-to-atom to bond, change bond orders, undo and redo. The 3D conformer
-rebuilds itself as you draw; rotate, zoom and click any atom for its element and coordinates.
-**The editor is never the chemistry authority** — every structure is re-parsed by RDKit on the
-backend. Give a carbon five bonds and it is rejected with the reason, and nothing is computed.
-
-### Computational sandbox — 16 real calculations
-Each declares its purpose, inputs, method, assumptions and limitations, and every run returns a
-**SHA-256 reproducibility fingerprint** over the calculation id, exact inputs and software
-versions.
-
-| Category | Calculations |
-|---|---|
-| Molecular | descriptors · Lipinski · structure validation · conformer ensemble · similarity · Murcko scaffold · **molecular dynamics** · **implicit solvent** |
-| Activity | measured activity distribution · assay comparability |
-| Formulation | composition totals · unit conversion |
-| Structural | **protein–ligand contacts** (experimental structures) |
-| Dosing | **pharmacokinetics** · **whole-body PBPK** · dilution |
-
-Molecular dynamics is velocity-Verlet integration on the MMFF94 potential with a Berendsen
-thermostat — real time evolution, with the trajectory playable in the 3D viewer. The PK engine was
-validated against the closed-form solutions (half-life exact, AUC within 0.04%), and the PBPK
-model conserves mass to **0.00000%** across all five species, a figure it publishes on every run
-so you can check the integration rather than trust it.
-
-### Evidence with provenance
-Eight live providers — ChEMBL, Open Targets, PubChem, PubMed, Crossref, GBIF, ClinicalTrials.gov,
-DailyMed. Every record keeps its source, retrieval time and release identifier. An attached record
-is a pointer, never a copy: the scientific corpus is never modified.
-
----
-
-## Running it
-
-Requires **Python 3.14** and **Node 24** (Node is only used by the frontend test harness).
+**macOS or Linux**
 
 ```bash
-python -m venv .venv
-.venv/Scripts/python -m pip install -r requirements.txt     # Linux/macOS: .venv/bin/python
-./scripts/start_backend.sh
+git clone https://github.com/muxamadsodiq/moleculab.git
+cd moleculab
+python3.14 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+sh scripts/start_backend.sh
 ```
 
-Open **http://127.0.0.1:8765/**.
+**Windows PowerShell**
 
-The repository ships with `moleculab.db`, a working database so the application is useful
-immediately: 5 plants, 23 compounds, 20 publications, 37 evidence records, 4 materials and a
-worked tablet formulation. To rebuild it from the seed data instead:
-
-```bash
-.venv/Scripts/python -m scripts.seed
-.venv/Scripts/python -m alembic upgrade head
+```powershell
+git clone https://github.com/muxamadsodiq/moleculab.git
+cd moleculab
+py -3.14 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8765
 ```
+
+Open **[MOLECULAB](http://127.0.0.1:8765/)** or **[API docs](http://127.0.0.1:8765/docs)**. The checked-in `moleculab.db` includes plants, compounds, publications, evidence records, materials and a worked tablet formulation. The curated JAK1 activity dataset ships separately in `research_artifacts/`.
+
+To create a separate SQLite database from seed, set `DATABASE_URL` to `sqlite:///./moleculab-local.db` in your shell, then run `python -m alembic upgrade head` and `python -m scripts.seed` with your virtual environment Python. Use the same `DATABASE_URL` when launching the app.
+
+### Optional AI generation
+
+Copy [`.env.example`](.env.example) to `.env` and select a provider. The default `LLM_PROVIDER=none` keeps the evidence retrieval path available. Set `LLM_PROVIDER=claude_cli` to use a locally authenticated Claude Code CLI, or install the optional `anthropic` package and set `LLM_PROVIDER=anthropic` plus `LLM_API_KEY` for the API. Keep credentials in the server environment or local `.env`.
 
 ### Tests
 
 ```bash
-.venv/Scripts/python -m pytest -q                        # 542 passed, 14 skipped
-LLM_PROVIDER=none ./scripts/start_backend.sh             # then, in another shell:
-node tests/frontend_smoke.mjs http://127.0.0.1:8765      # 40/40
+.venv/bin/python -m pip install -r requirements-dev.txt
+.venv/bin/python -m pytest -q
+node tests/frontend_smoke.mjs http://127.0.0.1:8765
 ```
 
-Run the frontend smoke suite against a server with `LLM_PROVIDER=none`: two assistant checks
-assert the exact wording of the deterministic extractive answer, and a live model rewrites it.
+Run the frontend smoke test against a server started with `LLM_PROVIDER=none` so the extractive-answer checks are deterministic. Live-provider tests are opt-in through `MOLECULAB_LIVE=1`.
 
-The 14 skips are opt-in live-provider tests (`MOLECULAB_LIVE=1`).
+## Architecture and credits
 
-### AI assistance (optional)
+FastAPI serves the UI and API. Python engines implement chemistry, activity screening, simulations and formulation evaluation. RDKit handles molecular validation and calculations. SQLAlchemy and Alembic manage persistence, with SQLite for the bundled local demo.
 
-Generation is optional and the application is fully usable without it — when no model is
-configured the assistant reports itself unavailable rather than producing a simulated answer.
-
-Two providers are supported: a local **Claude Code CLI** bridge (`LLM_PROVIDER=claude_cli`, no API
-key, all tools disabled, empty sandbox working directory), or the Anthropic API
-(`LLM_PROVIDER=anthropic` with `LLM_API_KEY`). Credentials stay server-side and are never sent to
-the browser.
-
----
-
-## Architecture
-
-```
-Browser — vanilla JS, hash router, NO build step, works offline
-  22 view modules · design tokens · epistemic-status vocabulary
-        ▼
-FastAPI — thin routers: validate, call an engine, serialise
-  optional routers mount defensively; a broken module reports itself
-  instead of taking down the application
-        ▼
-Engines — pure Python, no web dependency, independently testable
-  molecules · activity · screening · simulations · dynamics · pbpk
-  pharmacokinetics · formulation · structures · claims · verification
-        ▼
-SQLAlchemy 2.x + Alembic — 33 tables, SQLite (PostgreSQL-ready)
-        ▼
-Provider clients — all subclass SourceClient, cached, rate-limited, never raise
-```
-
-The engine/transport split is the load-bearing decision: engines take a session and plain
-arguments and return plain data, so the science is testable without a web server.
-
-**Structural guarantees enforced by schema and test:** no column containing "predict" exists in
-any activity-measurement table, so a prediction cannot be written where a measurement is read;
-IC50 is never pooled with Ki; censored values (`>`, `<`) are preserved and excluded from numeric
-use; an unevaluated material pair reads `not_evaluated`, never "compatible"; and no composite
-score exists anywhere in screening, repurposing or formulation.
-
-**50** Python modules · **22** frontend modules · **24** test files · **7** migrations ·
-RDKit 2026.9.2 · FastAPI 0.163.1 · SQLAlchemy 2.1.8
-
----
-
-## Scope and limitations
-
-MOLECULAB supports research. It is **not** a substitute for laboratory validation, expert review
-or regulatory assessment.
-
-- Computational results are not evidence of clinical effectiveness or safety.
-- A predicted or computed property is not proof of real-world product performance.
-- Pharmacokinetic parameters and tissue partition coefficients are **inputs you supply**, not
-  values derived from a structure. The curves are only as good as the parameters entered.
-- A concentration is not an effect: nothing here predicts efficacy, toxicity or harm.
-- The curated corpus is small and intended as a working demonstration.
-- No Uzbek medicine-registry data is included — that registry has no public programmatic access,
-  and the application says so rather than fabricating a registration record.
-
-## Third-party components
-
-Vendored for offline use, each with its licence shipped alongside. See
-[`THIRD_PARTY_LICENSES.md`](THIRD_PARTY_LICENSES.md) — kept because BSD-3-Clause and CC BY-SA both
-require the notice to travel with the code.
-
-| Component | Use | Licence |
-|---|---|---|
-| [RDKit](https://www.rdkit.org/) | all chemistry | BSD-3-Clause |
-| [3Dmol.js](https://3dmol.csb.pitt.edu/) 2.4.2 | 3D molecular viewer | BSD-3-Clause |
-| [JSME](https://jsme-editor.github.io/) 2024.4.29 | 2D structure editor | BSD-3-Clause |
-| [BodyParts3D](https://lifesciencedb.jp/bp3d/) | human anatomy meshes | CC BY-SA 2.1 Japan |
-
-> BodyParts3D, Copyright 2008 Life Science Integrated Database Center licensed by CC
-> Display-Inheritance 2.1 Japan
-
-Provider data is fetched live and not redistributed here; each record carries its source and
-retrieval time.
-
----
-
-Built for the Uzbekistan National AI Hackathon, with an initial focus on pharmaceutical
-formulation research and Central Asian natural-product chemistry.
+The local visualizers use vendored [3Dmol.js](https://3dmol.csb.pitt.edu/) and [JSME](https://jsme-editor.github.io/). Human meshes come from [BodyParts3D](https://lifesciencedb.jp/bp3d/), © 2008 Life Science Integrated Database Center, licensed under CC BY-SA 2.1 Japan. See [Third-party licenses](THIRD_PARTY_LICENSES.md) for attribution and terms.
